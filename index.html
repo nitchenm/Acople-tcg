@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acople cards : Prototipo HTML</title>
+    <meta name="description" content="Prototipo HTML de pantallas para Acople cards: el mercado de cartas MTG y Pokémon." />
+    <!-- Nota: solo HTML. CSS/JS se agregará en etapas siguientes. -->
+</head>
+
+<body>
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    <!-- HEADER / NAV -->
+    <header role="banner">
+        <div class="brand">
+            <h1 aria-label="Acople cards">🃏 Acople cards</h1>
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#home" data-nav>Inicio</a></li>
+                <li><a href="#catalogo" data-nav>Catálogo</a></li>
+                <li><a href="#carrito" data-nav>Carrito</a></li>
+                <li><a href="#perfil" data-nav>Perfil</a></li>
+                <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
+                <li><a href="#fidelizacion" data-nav>Puntos de Coleccionista</a></li>
+                <li><a href="#ingresar" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <!-- Pantalla 1: HOME / LANDING -->
+        <section id="home" class="screen" aria-labelledby="home-title">
+            <h2 id="home-title">Bienvenido</h2>
+            <p>Explora, colecciona y construye tu mazo ideal.</p>
+
+            <form aria-label="Buscador de cartas" data-screen="home">
+                <label for="q">¿Qué carta buscas hoy?</label>
+                <input id="q" name="q" type="search" placeholder="Black Lotus, Charizard, Planeswalker">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <section aria-labelledby="home-destacados-title">
+                <h3 id="home-destacados-title">Cartas destacadas de hoy</h3>
+                <ul class="cards" data-test-id="home-destacados">
+                    <li>
+                        <article>
+                            <h4>MTG: Black Lotus</h4>
+                            <p>descripcion carta 1</p>
+                            <a href="#detalle-carta" data-action="ver-detalle" data-id="C01">Ver detalle</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <h4>Pokémon: Shiny Charizard GX</h4>
+                            <p>descripcion carta 2</p>
+                            <a href="#detalle-carta" data-action="ver-detalle" data-id="C02">Ver detalle</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <h4>MTG: Jace, the Mind Sculptor</h4>
+                            <p>descripcion carta 3</p>
+                            <a href="#detalle-carta" data-action="ver-detalle" data-id="C03">Ver detalle</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Pantalla 2: Catalogo -->
+        <section id="catalogo" class="screen" aria-labelledby="catalogo-title">
+            <h2 id="catalogo-title">Catálogo de Cartas</h2>
+
+            <aside aria-label="Filtros">
+                <form data-screen="catalogo-filtros">
+                    <fieldset>
+                        <legend>Categorías</legend>
+                        <label><input type="checkbox" name="card" id="mtg" /> Magic: The Gathering</label>
+                        <label><input type="checkbox" name="card" id="pokemon" /> Pokémon</label>
+                        <label><input type="checkbox" name="card" id="rareza" /> Raras</label>
+                        <label><input type="checkbox" name="card" id="estandar" /> Estándar</label>
+                        <label><input type="checkbox" name="card" id="coleccion" /> Coleccionables</label>
+                        <label><input type="checkbox" name="card" id="promocionales" /> Promocionales</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Condición</legend>
+                        <label for="condicion">Estado</label>
+                        <input name="condicion" id="condicion" type="text" placeholder="Mint, Near Mint">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Rareza</legend>
+                        <label for="rareza">Nivel</label>
+                        <select name="rareza" id="rareza">
+                            <option value="comun">Común</option>
+                            <option value="infrecuente">Infrecuente</option>
+                            <option value="rara">Rara</option>
+                        </select>
+                    </fieldset>
+
+                    <button type="submit">Aplicar filtros</button>
+                </form>
+            </aside>
+
+            <section aria-labelledby="catalogo-listado-title">
+                <h3 id="catalogo-listado-title">Resultados</h3>
+                <ul class="grid" data-test-id="catalogo-listado">
+                    <li>
+                        <article>
+                            <header>
+                                <h4>MTG: Time Walk</h4>
+                                <p class="meta">Rareza: Rara • Condición: Near Mint</p>
+                            </header>
+                            <p>Una carta poderosa que permite tomar un turno extra.</p>
+                            <footer>
+                                <a href="#detalle-carta" data-action="ver-detalle" data-id="CQ101">Ver detalle</a>
+                                <a href="#carrito" data-action="agregar" data-id="CQ101">Agregar al carrito</a>
+                            </footer>
+                        </article>
+                    </li>
+
+                    <li>
+                        <article>
+                            <header>
+                                <h4>Pokémon: Pikachu Illustrator</h4>
+                                <p class="meta">Rareza: Rara • Condición: Mint</p>
+                            </header>
+                            <p>Una de las cartas Pokémon más raras y valiosas.</p>
+                            <footer>
+                                <a href="#detalle-carta" data-action="ver-detalle" data-id="CQ102">Ver detalle</a>
+                                <a href="#carrito" data-action="agregar" data-id="CQ102">Agregar al carrito</a>
+                            </footer>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Pantalla 3: Detalle de Carta -->
+        <section id="detalle-carta" class="screen" aria-labelledby="detalle-title">
+            <h2 id="detalle-title">Detalle de la Carta</h2>
+            <article data-id="CQ101">
+                <header>
+                    <h3>MTG: Time Walk</h3>
+                    <p class="meta">Rareza: Rara • Condición: Near Mint</p>
+                </header>
+               
+                <form aria-label="Personalización de la compra" data-screen="detalle-config">
+                    <fieldset>
+                        <legend>Personaliza tu compra</legend>
+                        <label for="condicion-detalle">Condición</label>
+                        <input type="text" name="condicion-detalle" id="condicion-detalle" placeholder="Near Mint">
+                    
+                        <label for="rareza-detalle">Rareza</label>
+                        <select name="rareza-detalle" id="rareza-detalle">
+                            <option value="comun">Común</option>
+                            <option value="infrecuente">Infrecuente</option>
+                            <option value="rara" selected>Rara</option>
+                        </select>
+
+                        <label for="extras">Extras</label>
+                        <select name="extras" id="extras" multiple aria-describedby="extra-help">
+                            <option value="foil">Foil</option>
+                            <option value="firmada">Firmada</option>
+                            <option value="primera-edicion">Primera Edición</option>
+                        </select>
+                        <small id="extra-help">Manten presionado Ctrl para seleccionar varios.</small>
+                    </fieldset>
+                    <button type="submit" data-action="agregar">Agregar al carrito</button>
+                </form>
+
+                <section aria-labelledby="resenas-title">
+                    <h4 id="resenas-title">Reseñas</h4>
+                    <ul>
+                        <li><strong>Carlos</strong> ★★★★★ - "Naizu".</li>
+                        <li><strong>Lucía</strong> ★★★★☆ - "Carozzi"</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <!-- Pantalla 4: Carrito -->
+        <section id="carrito" class="screen" aria-labelledby="carrito-title">
+            <h2 id="carrito-title">Tu Carrito</h2>
+
+            <table aria-describedby="carrito-resumen">
+                <caption id="carrito-resumen">Resumen de tus cartas seleccionadas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Carta</th>
+                        <th scope="col">Rareza</th>
+                        <th scope="col">Extras</th>
+                        <th scope="col">Subtotal</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MTG: Time Walk</td>
+                        <td>Rara</td>
+                        <td>Foil, Primera Edición</td>
+                        <td>5000 PC (Puntos de Coleccionista)</td>
+                        <td>
+                            <a href="#" data-action="editar">Editar</a>
+                            <a href="#" data-action="eliminar">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td >Total</td>
+                        <td>5000 PC</td>
+                        <td><a href="#checkout" data-action="pagar">Ir a Pagar</a></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
