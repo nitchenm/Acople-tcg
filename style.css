@@ -1,0 +1,162 @@
+/* Paleta de colores del proyecto
+indigo eye : #08415C
+persian red: #CC2936
+tea rose: #EBBAB9
+Blue munsali : #388697
+
+*/
+
+
+/* Logo de la tienda*/
+
+.logo{
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 250px;
+}
+
+
+/* --- Estilo de galeria para las cartas --- */
+.cards-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card-tcg {
+    background: #bcccca;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(8,65,92,0.10), 0 1.5px 6px #08415C22;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+.card-tcg:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(204,41,54,0.18), 0 2px 8px #08415C33;
+}
+.card-tcg .card-img {
+    width: 120%;
+    height: 400px;
+    object-fit: contain;
+    background: #f5f5f5;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+.card-tcg .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #08415C;
+    margin: 1rem 0 0.5rem 0;
+    text-align: center;
+}
+.card-tcg .card-meta {
+    font-size: 0.95rem;
+    color: #388697;
+    margin-bottom: 0.5rem;
+}
+.card-tcg .card-desc {
+    font-size: 0.95rem;
+    color: #333;
+    margin: 0 1rem 1rem 1rem;
+    text-align: center;
+}
+.card-tcg .card-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.4em 1.2em;
+    background: #CC2936;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.card-tcg .card-link:hover {
+    background: #EBBAB9;
+    color: #08415C;
+}
+
+/* tweaks responsivo*/
+@media (max-width: 700px) {
+    .cards-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Aplicacion de conraste */
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    color: #08415C;
+}
+
+main {
+    background: #388697;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+
+
+/* Imagen para fondo de header stilizada*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #388697; /* Color de fondo claro */
+}
+
+header[role=banner]{
+    background-image: url('images/rhystic-study.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 18%;
+    
+}
+
+/* Nav bar horizontal owo*/
+nav[aria-label="Navegación principal"] {
+    background:#CC2936; /* Fondo oscuro semitransparente */
+    padding: 0.5em 0;
+    height: 40px;
+    padding-top: 20px;
+
+}
+
+nav[aria-label="Navegación principal"] ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav[aria-label="Navegación principal"] li {
+    margin: 0;
+}
+
+nav[aria-label="Navegación principal"] a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav[aria-label="Navegación principal"] a:hover,
+nav[aria-label="Navegación principal"] a:focus {
+    background: #EBBAB9;
+    color: #08415C;
+}
