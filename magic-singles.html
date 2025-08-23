@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Singles - Acople TCG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="magic-singles.css">
+</head>
+
+ <!-- HEADER / NAV -->
+    <header role="banner">
+        <div class="brand">
+            <img src="images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#home" data-nav>Inicio</a></li>
+                <li><a href="#singles" data-nav>Singles</a></li>
+                <li><a href="#" data-nav>Singles</a></li>
+                <li><a href="#carrito" data-nav>Carrito</a></li>
+                <li><a href="#perfil" data-nav>Perfil</a></li>
+                <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
+                <li><a href="#fidelizacion" data-nav>Puntos de Coleccionista</a></li>
+                <li><a href="#ingresar" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<body>
+    <header>
+        <h1>Magic Singles</h1>
+    </header>
+
+    <main class="magic-singles">
+        <!-- Barra lateral de filtros -->
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <form>
+                <fieldset>
+                    <legend>Edición</legend>
+                    <select name="edition">
+                        <option value="all">Todas las ediciones</option>
+                        <option value="alpha">Alpha</option>
+                        <option value="beta">Beta</option>
+                        <option value="unlimited">Unlimited</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Formato</legend>
+                    <select name="format">
+                        <option value="all">Todos los formatos</option>
+                        <option value="standard">Estándar</option>
+                        <option value="modern">Modern</option>
+                        <option value="commander">Commander</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Rareza</legend>
+                    <select name="rarity">
+                        <option value="all">Todas las rarezas</option>
+                        <option value="common">Común</option>
+                        <option value="uncommon">Infrecuente</option>
+                        <option value="rare">Rara</option>
+                        <option value="mythic">Mítica</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Precio</legend>
+                    <input type="number" name="min-price" placeholder="Mínimo">
+                    <input type="number" name="max-price" placeholder="Máximo">
+                </fieldset>
+
+                <button type="submit">Aplicar filtros</button>
+            </form>
+        </aside>
+
+        <!-- Resultados de búsqueda -->
+        <section class="results">
+            <h2>Resultados</h2>
+            <div class="cards-grid">
+                <!-- Cartas en la ventana de busqueda -->
+                <article class="card">
+                    <img src="images/black-lotus.webp" alt="Black Lotus">
+                    <h3>Black Lotus</h3>
+                    <p>Edición: Urza Saga</p>
+                    <p>Rareza: Mítica</p>
+                    <p>Precio: $120.000.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+
+                <article class="card">
+                    <img src="images/time-walk.webp" alt="Time Walk">
+                    <h3>Time Walk</h3>
+                    <p>Edición: Alpha</p>
+                    <p>Rareza: Mítica</p>
+                    <p>Precio: $17.000.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/gaea.jpg" alt="Gaea Cradle">
+                    <h3>Gaea Cradle</h3>
+                    <p>Edición: Alpha</p>
+                    <p>Rareza: Mítica</p>
+                    <p>Precio: $1.349.999</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/mox-saphire.avif" alt="Mox Saphire">
+                    <h3>Mox Saphire</h3>
+                    <p>Edición: Alpha</p>
+                    <p>Rareza: Rara</p>
+                    <p>Precio: $15.000.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/volcanic-Island.avif" alt="Volcanic Island">
+                    <h3>Volcanic Island</h3>
+                    <p>Edición: 3era Edicion</p>
+                    <p>Rareza: Rara</p>
+                    <p>Precio: $764.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/black-chocobo.avif" alt="Black Chocobo">
+                    <h3>Traveling Chocobo(Borderless Black Ink - Japonés)</h3>
+                    <p>Edición: Final Fantasy</p>
+                    <p>Rareza: Mítica</p>
+                    <p>Precio: $6.500.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/chains-of-mephistopheles.jpg" alt="Chains of Mephistopheles">
+                    <h3>Chains of Mephistopheles</h3>
+                    <p>Edición: Legends</p>
+                    <p>Rareza: Rara</p>
+                    <p>Precio: $1.050.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/ugin.avif" alt="Ugin, the Spirit Dragon">
+                    <h3>Ugin, the Spirit Dragon</h3>
+                    <p>Edición: Secret Lair</p>
+                    <p>Rareza: Mítica</p>
+                    <p>Precio: $915.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/the-one-ring-scroll.jpg" alt="The One Ring">
+                    <h3>The One Ring (Scroll Edition)</h3>
+                    <p>Edición: The lord of the Rings: Tales of Middle earth</p>
+                    <p>Rareza: Mítica</p>
+                    <p>Precio: $415.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/counterspell.avif" alt="Counterspell">
+                    <h3>Counterspell (Foil)</h3>
+                    <p>Edición: Secret Lair</p>
+                    <p>Rareza: Rara</p>
+                    <p>Precio: $120.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/pact of negation.jpg" alt="Pact Of Negation">
+                    <h3>Pact of Negation (AKH)</h3>
+                    <p>Edición: Masterpiece Series: Invocations</p>
+                    <p>Rareza: Mitica</p>
+                    <p>Precio: $139.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="images/magicSingles/Rhystic Study.avif" alt="Rhystic Study">
+                    <h3>Rhystic Study</h3>
+                    <p>Edición: Wilds of Eldraine Enchanting Tales</p>
+                    <p>Rareza: Mitica</p>
+                    <p>Precio: $129.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
