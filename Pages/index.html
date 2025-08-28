@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acople cards : Prototipo HTML</title>
+    <meta name="description" content="Prototipo HTML de pantallas para Acople cards: el mercado de cartas MTG y Pokémon." />
+    <link rel="stylesheet" href="/Acople-tcg/CSS/style.css">
+    <!-- JS se agregará en etapas siguientes. -->
+</head>
+
+<body>
+  
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    <!-- HEADER / NAV -->
+    <header role="banner">
+        <div class="brand">
+            <img src="/Acople-tcg/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" data-nav>Inicio</a></li>
+                <li><a href="#singles" data-nav>Singles</a></li>
+                <li><a href="#carrito" data-nav>Carrito</a></li>
+                <li><a href="#perfil" data-nav>Perfil</a></li>
+                <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
+                <li><a href="#fidelizacion" data-nav>Puntos de Coleccionista</a></li>
+                <li><a href="#ingresar" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <!-- Pantalla 1: HOME / LANDING -->
+        <section id="home" class="screen" aria-labelledby="home-title">
+            <h2 id="home-title">Bienvenido</h2>
+            <p>Explora, colecciona y construye tu mazo ideal.</p>
+
+            <form aria-label="Buscador de cartas" data-screen="home">
+                <label for="q">¿Qué carta buscas hoy?</label>
+                <input id="q" name="q" type="search" placeholder="Black Lotus, Charizard, Planeswalker">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <section aria-labelledby="home-destacados-title">
+                            <h3 id="home-destacados-title">Cartas destacadas de hoy</h3>
+                            <ul class="cards-gallery" data-test-id="home-destacados">
+                                                <!-- Magic: The Gathering -->
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/black-lotus.webp" alt="MTG: Black Lotus" class="card-img">
+                                                    <div class="card-title">Black Lotus</div>
+                                                    <div class="card-meta">Magic: The Gathering</div>
+                                                    <div class="card-desc">La carta más icónica y valiosa de MTG.</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C01">Ver detalle</a>
+                                                </li>
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/the-one-ring.jpg" alt="MTG: The One ring " class="card-img">
+                                                    <div class="card-title">The One Ring Scroll Edition</div>
+                                                    <div class="card-meta">Magic: The Gathering</div>
+                                                    <div class="card-desc">La carta mas iconica de la expansion de LOTR esta aqui!</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C03">Ver detalle</a>
+                                                </li>
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/time-walk.webp" alt="MTG: Time Walk" class="card-img">
+                                                    <div class="card-title">Time Walk</div>
+                                                    <div class="card-meta">Magic: The Gathering</div>
+                                                    <div class="card-desc">Permite tomar un turno extra, carta de poder histórico.</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C04">Ver detalle</a>
+                                                </li>
+
+                                                <!-- Pokémon -->
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/Charizard-ex.webp" alt="Pokémon: Shiny Charizard GX" class="card-img">
+                                                    <div class="card-title">Shiny Charizard GX</div>
+                                                    <div class="card-meta">Pokémon</div>
+                                                    <div class="card-desc">Una de las cartas más buscadas y valiosas de Pokémon.</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P01">Ver detalle</a>
+                                                </li>
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/Pokémon_Illustrator.png" alt="Pokémon: Pikachu Illustrator" class="card-img">
+                                                    <div class="card-title">Pikachu Illustrator</div>
+                                                    <div class="card-meta">Pokémon</div>
+                                                    <div class="card-desc">La carta más rara y exclusiva de Pokémon.</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P02">Ver detalle</a>
+                                                </li>
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/mewtwo.jpg" alt="Pokémon: Mewtwo EX" class="card-img">
+                                                    <div class="card-title">Mewtwo EX</div>
+                                                    <div class="card-meta">Pokémon</div>
+                                                    <div class="card-desc">Poderoso Pokémon legendario, favorito de muchos fans.</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P03">Ver detalle</a>
+                                                </li>
+
+                                                <!-- Yu-Gi-Oh! -->
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/blue-eyes-dragon.jpg" alt="Yu-Gi-Oh!: Blue-Eyes White Dragon" class="card-img">
+                                                    <div class="card-title">Blue-Eyes White Dragon</div>
+                                                    <div class="card-meta">Yu-Gi-Oh!</div>
+                                                    <div class="card-desc">El dragón más famoso y poderoso del universo Yu-Gi-Oh!.</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="Y01">Ver detalle</a>
+                                                </li>
+                                                <li class="card-tcg">
+                                                    <img src="/Acople-tcg/images/dark-magician.jpg" alt="Yu-Gi-Oh!: Dark Magician" class="card-img">
+                                                    <div class="card-title">Dark Magician</div>
+                                                    <div class="card-meta">Yu-Gi-Oh!</div>
+                                                    <div class="card-desc">El mago emblemático de la serie y pieza clave en duelos.</div>
+                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="Y02">Ver detalle</a>
+                                                </li>
+                                                
+                            </ul>
+            </section>
+        </section>
+
+        <!-- Pantalla 2: Singles -->
+         <section id="singles" class="screen" aria-labelledby="singles-title">
+            <h2 id="singles-title">Compra de Singles</h2>
+            <div class="tcg-icons">
+                <a href="magic-singles.html" aria-label="Magic: The Gathering">
+                    <img src="/Acople-tcg/images/magic-icon.png" alt="Magic: The Gathering">
+                </a>
+                <a href="pokemon-singles.html" aria-label="Pokémon">
+                    <img src="/Acople-tcg/images/pokemon-icon.png" alt="Pokémon">
+                </a>    
+                <a href="yugioh-singles.html" aria-label="Yu-Gi-Oh!">
+                    <img src="/Acople-tcg/images/yugioh-icon.png" alt="Yu-Gi-Oh!">
+                </a>
+            </div>
+
+         </section>
+        
+
+        <!-- Pantalla 3: Detalle de Carta -->
+        <section id="detalle-carta" class="screen" aria-labelledby="detalle-title">
+            <h2 id="detalle-title">Detalle de la Carta</h2>
+            <article data-id="CQ101">
+                <header>
+                    <h3>MTG: Time Walk</h3>
+                    <p class="meta">Rareza: Rara • Condición: Near Mint</p>
+                </header>
+               
+                <form aria-label="Personalización de la compra" data-screen="detalle-config">
+                    <fieldset>
+                        <legend>Personaliza tu compra</legend>
+                        <label for="condicion-detalle">Condición</label>
+                        <input type="text" name="condicion-detalle" id="condicion-detalle" placeholder="Near Mint">
+                    
+                        <label for="rareza-detalle">Rareza</label>
+                        <select name="rareza-detalle" id="rareza-detalle">
+                            <option value="comun">Común</option>
+                            <option value="infrecuente">Infrecuente</option>
+                            <option value="rara" selected>Rara</option>
+                        </select>
+
+                        <label for="extras">Extras</label>
+                        <select name="extras" id="extras" multiple aria-describedby="extra-help">
+                            <option value="foil">Foil</option>
+                            <option value="firmada">Firmada</option>
+                            <option value="primera-edicion">Primera Edición</option>
+                        </select>
+                        <small id="extra-help">Manten presionado Ctrl para seleccionar varios.</small>
+                    </fieldset>
+                    <button type="submit" data-action="agregar">Agregar al carrito</button>
+                </form>
+
+                <section aria-labelledby="resenas-title">
+                    <h4 id="resenas-title">Reseñas</h4>
+                    <ul>
+                        <li><strong>Carlos</strong> ★★★★★ - "Naizu".</li>
+                        <li><strong>Lucía</strong> ★★★★☆ - "Carozzi"</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+        
+        <footer>
+            <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -114,7 +114,7 @@ body {
 }
 
 header[role=banner]{
-    background-image: url('images/rhystic-study.jpeg');
+    background-image: url('/Acople-tcg/images/rhystic-study.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 40px;
