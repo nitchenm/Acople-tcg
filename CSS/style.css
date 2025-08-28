@@ -79,6 +79,7 @@ Blue munsali : #388697
     text-decoration: none;
     font-weight: 500;
     transition: background 0.2s, color 0.2s;
+    margin-top: auto; 
 }
 .card-tcg .card-link:hover {
     background: #EBBAB9;
@@ -114,7 +115,7 @@ body {
 }
 
 header[role=banner]{
-    background-image: url('/Acople-tcg/images/rhystic-study.jpeg');
+    background-image: url('/images/rhystic-study.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 40px;
@@ -140,6 +141,7 @@ nav[aria-label="Navegación principal"] ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    
 }
 
 nav[aria-label="Navegación principal"] li {

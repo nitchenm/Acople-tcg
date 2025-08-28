@@ -93,7 +93,7 @@ main.magic-singles {
 /* Estilos de cartas dentro del contenedor*/
 .card {
     background-color: #cce4dc;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;

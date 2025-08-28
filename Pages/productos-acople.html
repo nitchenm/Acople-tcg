@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otros Productos - Acople TCG</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/productos.css">
+</head>
+
+ <!-- HEADER / NAV -->
+    <header role="banner">
+        <div class="brand">
+            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" data-nav>Inicio</a></li>
+                <li><a href="#singles" data-nav>Singles</a></li>
+                <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
+                <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
+                <li><a href="#carrito" data-nav>Carrito</a></li>
+                <li><a href="login.html" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<body>
+    <header>
+        <h1>Otros Productos</h1>
+    </header>
+
+    <main class="magic-singles">
+        <!-- Barra lateral de filtros -->
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <form>
+                <fieldset>
+                    <legend>Accesorio</legend>
+                    <select name="edition">
+                        <option value="all">Todos</option>
+                        <option value="carpetas">Carpetas</option>
+                        <option value="dados">Dados</option>
+                        <option value="playmat">Playmat</option>
+                        <option value="protectores">Protectores</option>
+                        <option value="portamazos">Portamazos</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Precio</legend>
+                    <input type="number" name="min-price" placeholder="Mínimo">
+                    <input type="number" name="max-price" placeholder="Máximo">
+                </fieldset>
+
+                <button type="submit">Aplicar filtros</button>
+            </form>
+        </aside>
+
+        <!-- Resultados de búsqueda -->
+        <section class="results">
+            <h2>Resultados</h2>
+            <div class="cards-grid">
+                <!-- Cartas en la ventana de busqueda -->
+                <article class="card">
+                    <img src="/images/productos/playmat/fierce-guardianship playmat.webp" alt="Fierce of Guardianship">
+                    <h3>Fierce of Guardianship</h3>
+                    <p>Producto: Ultra Pro</p>
+                    <p>Marca: Top Deck</p>
+                    <p>Precio: $30.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+
+                <article class="card">
+                    <img src="/images/productos/playmat/wrenn playmat.webp" alt="Wrenn and Six Playmat">
+                    <h3>March of the Machine Wrenn and Realmbreaker</h3>
+                    <p>Producto: Playmat</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $26.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="/images/productos/playmat/demon hunters playmat.webp" alt="Demon Hunters Playmat">
+                    <h3>Demon Hunters</h3>
+                    <p>Producto: Playmat</p>
+                    <p>Marca: Dragon Shield</p>
+                    <p>Precio: $25.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="/images/productos/playmat/Dyrkottr; Dragon of Curiosity.webp" alt="Dyrkottr: Dragon of Curiosity Playmat">
+                    <h3>Dyrkottr: Dragon of Curiosity</h3>
+                     <p>Producto: Playmat</p>
+                    <p>Marca: Dragon Shield</p>
+                    <p>Precio: $22.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="/images/productos/playmat/rayquaza playmat.webp" alt="Rayquaza Playmat">
+                    <h3>Rayquaza Playmat</h3>
+                    <p>Producto: Playmat</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $47.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="/images/productos/playmat/charmander playmat.webp" alt="Charmander Playmat">
+                    <h3>Charmander Playmat</h3>
+                    <p>Producto: Playmat</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $47.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
