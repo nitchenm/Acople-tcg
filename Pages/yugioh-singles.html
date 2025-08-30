@@ -1,6 +1,134 @@
-<!---Seccion de nitchen owo
 
-Llenar campos de cartas , mantener ediciones en los filtros y cambiar los tipos de rareza
-segun sea el tcg a tratar , ya esta esilizado en magic-singles.css para que el box contenga
-el orden de los botones y el tamaño de las cartas a mostrar
--->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yugioh-singles Singles - Acople TCG</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/yugioh-singles.css">
+</head>
+
+ <!-- HEADER / NAV -->
+    <header role="banner">
+        <div class="brand">
+            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" data-nav>Inicio</a></li>
+                <li><a href="#singles" data-nav>Singles</a></li>
+                <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
+                <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
+                <li><a href="#carrito" data-nav>Carrito</a></li>
+                <li><a href="login.html" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<body>
+    <header>
+        <h1>Yugioh-Singles</h1>
+    </header>
+
+    <main class="Yugioh-singles">
+        <!-- Barra lateral de filtros -->
+        <aside class="filters">
+            <h2>Filtros</h2>
+            <form>
+                <fieldset>
+                    <legend>Edición</legend>
+                    <select name="edition">
+                        <option value="all">Todas las ediciones</option>
+                        <option value="alpha">Alpha</option>
+                        <option value="beta">Beta</option>
+                        <option value="unlimited">Unlimited</option>
+                        <option value="lotr">Lord Of the Rings</option>
+                        <option value="final fantasy">Final Fantasy</option>
+                        <option value="final fantasy">Secret Lair</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Formato</legend>
+                    <select name="format">
+                        <option value="all">Todos los formatos</option>
+                        <option value="standard">Estándar</option>
+                        <option value="modern">Modern</option>
+                        <option value="commander">Commander</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Rareza</legend>
+                    <select name="rarity">
+                        <option value="all">Todas las rarezas</option>
+                        <option value="common">Común</option>
+                        <option value="uncommon">Infrecuente</option>
+                        <option value="rare">Rara</option>
+                        <option value="mythic">Mítica</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Precio</legend>
+                    <input type="number" name="min-price" placeholder="Mínimo">
+                    <input type="number" name="max-price" placeholder="Máximo">
+                </fieldset>
+
+                <button type="submit">Aplicar filtros</button>
+            </form>
+        </aside>
+
+        <!-- Resultados de búsqueda -->
+        <section class="results">
+            <h2>Resultados</h2>
+            <div class="cards-grid">
+                <!-- Cartas en la ventana de busqueda -->
+                <article class="card">
+                    <img src="/images/yugiohSingles/Droll-&-Lock-Bird.jpg" alt="Black Lotus">
+                    <h3>Droll & Lock Bird</h3>
+                    <p>Edición: 1st Edition</p>
+                    <p>Rareza: Super rare</p>
+                    <p>Precio: $2.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+
+                <article class="card">
+                    <img src="/images/yugiohSingles/Dark-Magician-Of-Chaos.jpg" alt="Time Walk">
+                    <h3>Dark Magician Of Chaos</h3>
+                    <p>Edición: 1st Edition</p>
+                    <p>Rareza: Ultra rare</p>
+                    <p>Precio: $150.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="/images/yugiohSingles/Dark-Magician.webp" alt="Gaea Cradle">
+                    <h3>Dark Magician</h3>
+                    <p>Edición: Adidas limited edition</p>
+                    <p>Rareza: Ultra rare</p>
+                    <p>Precio: $150.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="card">
+                    <img src="/images/yugiohSingles/Fiendsmith-Engraver.jpg" alt="Mox Saphire">
+                    <h3>FiendSmith Engraver</h3>
+                    <p>Edición: 1st Edition</p>
+                    <p>Rareza: Secret Rare</p>
+                    <p>Precio: $75.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
