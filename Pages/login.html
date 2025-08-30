@@ -1,6 +1,153 @@
-<!-- Seccion pal domingo
- 
-Crear login con opcion de registro , mateniendo la prioridad del navbar para la navegacion
-para el usuario y con el mismo footer correspondiente
+<!DOCTYPE html>
+<html lang="es">
 
--->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión | Acople TCG</title>
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <style>
+        /* --- Estilos específicos para el login y el registro --- */
+        .login-container {
+            max-width: 400px;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .login-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-container label {
+            font-weight: bold;
+            margin: 8px 0 4px;
+        }
+
+        .login-container input {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .login-container button {
+            padding: 10px;
+            background-color: #1b5e20;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #388e3c;
+        }
+
+        .login-container .toggle {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-container .toggle a {
+            color: #1b5e20;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+    <header role="banner">
+        <div class="brand">
+            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" data-nav>Inicio</a></li>
+                <li><a href="index.html#singles" data-nav>Singles</a></li>
+                <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
+                <li><a href="index.html#blog" data-nav>Guía & Estrategias</a></li>
+                <li><a href="index.html#carrito" data-nav>Carrito</a></li>
+                <li><a href="login.html" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" tabindex="-1">
+        <section class="login-container" id="login-form">
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="login-email">Correo electrónico</label>
+                <input type="email" id="login-email" name="email" placeholder="ejemplo@correo.com" required />
+
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" name="password" placeholder="********" required />
+
+                <button type="submit">Ingresar</button>
+            </form>
+            <div class="toggle">
+                ¿No tienes cuenta? <a id="show-register">Regístrate aquí</a>
+            </div>
+        </section>
+
+        <section class="login-container" id="register-form" style="display: none;">
+            <h2>Registro</h2>
+            <form>
+                <label for="reg-name">Nombre completo</label>
+                <input type="text" id="reg-name" name="name" placeholder="Tu nombre" required />
+
+                <label for="reg-email">Correo electrónico</label>
+                <input type="email" id="reg-email" name="email" placeholder="ejemplo@correo.com" required />
+
+                <label for="reg-password">Contraseña</label>
+                <input type="password" id="reg-password" name="password" placeholder="********" required />
+
+                <label for="reg-confirm">Confirmar contraseña</label>
+                <input type="password" id="reg-confirm" name="confirm" placeholder="********" required />
+
+                <button type="submit">Crear cuenta</button>
+            </form>
+            <div class="toggle">
+                ¿Ya tienes cuenta? <a id="show-login">Inicia sesión aquí</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Alternar entre login y registro
+        const loginForm = document.getElementById("login-form");
+        const registerForm = document.getElementById("register-form");
+        const showRegister = document.getElementById("show-register");
+        const showLogin = document.getElementById("show-login");
+
+        showRegister.addEventListener("click", () => {
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+        });
+
+        showLogin.addEventListener("click", () => {
+            registerForm.style.display = "none";
+            loginForm.style.display = "block";
+        });
+    </script>
+</body>
+</html>
