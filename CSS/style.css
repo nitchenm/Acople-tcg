@@ -9,19 +9,28 @@ Blue munsali : #388697
 
 /* Logo de la tienda*/
 
-.logo{
-    height: 200px;
+/* Sombra mágica en el logo */
+.logo {
+    height: 180px;
     width: auto;
-    display: block;
     margin: 0 auto;
     max-width: 250px;
+    filter: drop-shadow(0 0 10px rgba(223, 172, 77, 0.7));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(165, 114, 3, 0.9));
 }
 
 
+
 /* --- Estilo de galeria para las cartas --- */
+/* Cards con efecto mágico */
 .cards-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     margin: 2rem 0;
     padding: 0;
@@ -29,61 +38,61 @@ Blue munsali : #388697
 }
 
 .card-tcg {
-    background: #bcccca;
-    border-radius: 16px;
-    box-shadow: 0 2px 16px rgba(8,65,92,0.10), 0 1.5px 6px #08415C22;
+    background: linear-gradient(160deg, #f5f5f5, #e6e6e6);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(8,65,92,0.25);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
+
 .card-tcg:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 24px rgba(204,41,54,0.18), 0 2px 8px #08415C33;
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 12px 28px rgba(41, 166, 204, 0.4);
 }
+
 .card-tcg .card-img {
-    width: 90%;
+    width: 100%;
     height: auto;
     object-fit: contain;
-    background: #f5f5f5;
-    display: block;
-    border-radius: 12px 12px 0 0;
+    border-bottom: 2px solid #ccc;
 }
+
 .card-tcg .card-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: #08415C;
-    margin: 1rem 0 0.5rem 0;
-    text-align: center;
+    color: #286d8d;
+    margin: 1rem 0 0.3rem;
 }
+
 .card-tcg .card-meta {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #388697;
-    margin-bottom: 0.5rem;
 }
+
 .card-tcg .card-desc {
-    font-size: 0.95rem;
-    color: #333;
-    margin: 0 1rem 1rem 1rem;
-    text-align: center;
+    font-size: 0.9rem;
+    color: #292525;
+    margin: 0.5rem 1rem 1rem;
 }
+
 .card-tcg .card-link {
     display: inline-block;
-    margin-bottom: 1rem;
-    padding: 0.4em 1.2em;
-    background: #CC2936;
+    margin: 1rem auto 1.5rem;
+    padding: 0.5em 1.5em;
+    background: linear-gradient(135deg, #458ae6, #EBBAB9);
     color: #fff;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s, color 0.2s;
-    margin-top: auto; 
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
+
 .card-tcg .card-link:hover {
-    background: #EBBAB9;
+    background: linear-gradient(135deg, #4e50b6d3, #b02ace);
     color: #08415C;
+    box-shadow: 0 0 12px rgba(57, 4, 117, 0.7);
 }
 
 /* tweaks responsivo*/
@@ -94,54 +103,62 @@ Blue munsali : #388697
 }
 
 /* Aplicacion de conraste */
+/* Títulos con efecto de brillo */
 h1, h2, h3, h4 {
-    font-family: 'Segoe UI', 'Arial', sans-serif;
-    color: #08415C;
+    color: #e9dbdb;
+    text-align: center;
+    text-shadow: 0 0 8px rgb(18, 19, 20);
 }
 
+/* Main con fondo suave */
 main {
-    background: #388697;
+    background: rgba(17, 0, 114, 0.1);
+    backdrop-filter: blur(4px);
     min-height: 100vh;
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 
 /* Imagen para fondo de header stilizada*/
+/* Reset y tipografía mágica */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #388697; /* Color de fondo claro */
+    background: linear-gradient(135deg, #0a577a 0%, #2a4e92 30%, #9a48c9 100%);
+    color: #fff;
+    overflow-x: hidden;
 }
 
-header[role=banner]{
-    background-image: url('/images/rhystic-study.jpeg');
+/* Header con efecto épico */
+header[role=banner] {
+    background-image: url('/images/TopTCG_BANNER.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 40px;
-    padding-bottom: 18%;
-    
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 60px 0 18%;
+    text-align: center;
+    box-shadow: inset 0 -50px 100px rgba(0, 0, 0, 0.6);
 }
 
 /* Nav bar horizontal owo*/
+/* Nav bar mágico */
 nav[aria-label="Navegación principal"] {
-    background:#CC2936; /* Fondo oscuro semitransparente */
-    padding: 0.5em 0;
-    height: 40px;
-    padding-top: 20px;
-
+    background: rgba(8,65,92,0.85);
+    padding: 1em 0;
+    backdrop-filter: blur(6px);
+    border-top: 2px solid #EBBAB9;
+    border-bottom: 2px solid #EBBAB9;
 }
 
 nav[aria-label="Navegación principal"] ul {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
+    gap: 2rem;
     margin: 0;
-    
+    padding: 0;
+    list-style: none;
 }
 
 nav[aria-label="Navegación principal"] li {
@@ -151,41 +168,42 @@ nav[aria-label="Navegación principal"] li {
 nav[aria-label="Navegación principal"] a {
     text-decoration: none;
     color: #fff;
-    font-weight: 500;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    transition: background 0.2s, color 0.2s;
+    font-weight: 600;
+    padding: 0.6em 1.2em;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav[aria-label="Navegación principal"] a:hover,
 nav[aria-label="Navegación principal"] a:focus {
-    background: #EBBAB9;
+    background: linear-gradient(135deg, #c597e4, #cc2983);
     color: #08415C;
+    box-shadow: 0 0 10px rgba(167, 46, 112, 0.8);
 }
 
 /* Estilos para compra de singles */
 
 .tcg-icons {
     display: flex;
-    justify-content: left;
-    gap: 5rem;
+    justify-content: center;
+    gap: 4rem;
     flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .tcg-icons a {
-    display: inline-block;
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
-    background-color: #eedfdf; /* Fondo de color para destacar */
+    background: radial-gradient(circle, #dde0f7 0%, #7472d4 100%);
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .tcg-icons a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 10px 25px rgba(235,186,185,0.8);
 }
 
 .tcg-icons img {
@@ -193,4 +211,16 @@ nav[aria-label="Navegación principal"] a:focus {
     height: 100%;
     object-fit: contain; /* Asegura que las imágenes se ajusten correctamente */
     padding: 1px; /* Espaciado interno para que las imágenes no toquen los bordes */
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #08415C;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 2px solid #EBBAB9;
+    font-size: 0.9rem;
 }
