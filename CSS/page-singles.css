@@ -1,3 +1,5 @@
+/* Estilos para la página Magic Singles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,7 +14,7 @@ header {
     text-align: center;
 }
 
-main.Yugioh-singles {
+main.page-singles {
     display: flex;
     margin: 2rem;
 }

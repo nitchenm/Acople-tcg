@@ -14,7 +14,7 @@ header {
     text-align: center;
 }
 
-main.magic-singles {
+main.otros-productos {
     display: flex;
     margin: 2rem;
 }
@@ -83,15 +83,15 @@ main.magic-singles {
     margin-bottom: 1rem;
 }
 
-/* Grid contenedor de las cartas*/
-.cards-grid {
+/* Grid contenedor de llos playmats*/
+.playmat-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 4.3rem;
 }
 
 /* Estilos de cartas dentro del contenedor*/
-.card {
+.playmat {
     background-color: #cce4dc;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -105,24 +105,24 @@ main.magic-singles {
     flex-direction: column;
 }
 
-.card img {
+.playmat img {
     width: 100%; 
     height: auto; 
     border-bottom: 1px solid #ccc;
     margin-bottom: 1rem;
 }
 
-.card h3 {
+.playmat h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.card p {
+.playmat p {
     font-size: 1rem;
     margin: 0.5rem 0;
 }
 
-.card button {
+.playmat button {
     background-color: #08415C; 
     color: #fff;
     border: none;
@@ -133,6 +133,32 @@ main.magic-singles {
     margin-top: auto;
 }
 
-.card button:hover {
+.playmat button:hover {
     background-color: #388697; 
+}
+
+/* Estilos específicos para el playmat de Rayquaza */
+.playmat.rayquaza {
+    background-color: #e0f7fa; /* Fondo específico para Rayquaza */
+    border: 2px solid #00796b; /* Borde verde esmeralda */
+}
+
+.playmat.rayquaza img {
+    border-radius: 10px 10px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.playmat.rayquaza h3 {
+    color: #00796b; /* Título en verde esmeralda */
+}
+
+.playmat.rayquaza p {
+    color: #555; /* Texto en gris oscuro */
+}
+
+.playmat.rayquaza button {
+    background-color: #00796b; /* Botón en verde esmeralda */
+}
+
+.playmat.rayquaza button:hover {
+    background-color: #004d40; /* Verde más oscuro al pasar el mouse */
 }
