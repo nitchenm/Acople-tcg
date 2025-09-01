@@ -1,0 +1,52 @@
+.perfil-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: #111; 
+}
+
+.perfil-info p {
+    font-size: 1rem;
+    margin: 8px 0;
+    color: #111; 
+}
+
+.perfil-historial {
+    margin-top: 20px;
+}
+
+.perfil-historial h3 {
+    color: #111; 
+}
+
+.perfil-historial ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.perfil-historial li {
+    background: #f5f5f5;
+    color: #111; 
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+#logout-btn {
+    margin-top: 20px;
+    background-color: #b71c1c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#logout-btn:hover {
+    background-color: #d32f2f;
+}
