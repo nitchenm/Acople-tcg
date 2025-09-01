@@ -1,88 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- 
-La estructura de el login me parece ok , sin embargo el css debe estar en la carpeta css y no en el mismo html , esto por un tema de redundancia y orden
-una vez terminado con el login y registro, requiero que se redirija a un perfil de usuario indicando sus puntos con nosotros( que se ganan con cada compra) , una seccion de 
-historial de compras , el correo , nombre , direccion y telefono del usuario.  Tambien un boton para cerrar sesion.
--->
 
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iniciar Sesión | Acople TCG</title>
     <link rel="stylesheet" href="/CSS/style.css" />
-    <style>
-        /* --- Estilos específicos para el login y el registro --- */
-        .login-container {
-            max-width: 400px;
-            margin: 40px auto;
-            background-color: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .login-container form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .login-container label {
-            font-weight: bold;
-            margin: 8px 0 4px;
-        }
-
-        .login-container input {
-            padding: 10px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-
-        .login-container button {
-            padding: 10px;
-            background-color: #1b5e20;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .login-container button:hover {
-            background-color: #388e3c;
-        }
-
-        .login-container .toggle {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .login-container .toggle a {
-            color: #1b5e20;
-            cursor: pointer;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="/CSS/login.css" />
 </head>
 
 <body>
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
 
+    
     <header role="banner">
         <div class="brand">
             <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
             <p class="tagline">Mercado de cartas MTG y Pokémon</p>
         </div>
-
         <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html" data-nav>Inicio</a></li>
@@ -95,10 +33,12 @@ historial de compras , el correo , nombre , direccion y telefono del usuario.  T
         </nav>
     </header>
 
+    
     <main id="contenido" tabindex="-1">
+        <!-- formulario para el login -->
         <section class="login-container" id="login-form">
             <h2>Iniciar Sesión</h2>
-            <form>
+            <form id="form-login">
                 <label for="login-email">Correo electrónico</label>
                 <input type="email" id="login-email" name="email" placeholder="ejemplo@correo.com" required />
 
@@ -112,9 +52,10 @@ historial de compras , el correo , nombre , direccion y telefono del usuario.  T
             </div>
         </section>
 
+        <!-- formulario para el registo -->
         <section class="login-container" id="register-form" style="display: none;">
             <h2>Registro</h2>
-            <form>
+            <form id="form-register">
                 <label for="reg-name">Nombre completo</label>
                 <input type="text" id="reg-name" name="name" placeholder="Tu nombre" required />
 
@@ -135,17 +76,18 @@ historial de compras , el correo , nombre , direccion y telefono del usuario.  T
         </section>
     </main>
 
+    
     <footer>
         <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // Alternar entre login y registro
         const loginForm = document.getElementById("login-form");
         const registerForm = document.getElementById("register-form");
         const showRegister = document.getElementById("show-register");
         const showLogin = document.getElementById("show-login");
 
+        // Alternar formularios
         showRegister.addEventListener("click", () => {
             loginForm.style.display = "none";
             registerForm.style.display = "block";
@@ -154,6 +96,18 @@ historial de compras , el correo , nombre , direccion y telefono del usuario.  T
         showLogin.addEventListener("click", () => {
             registerForm.style.display = "none";
             loginForm.style.display = "block";
+        });
+
+        // Simular login y redirigir a perfil
+        document.getElementById("form-login").addEventListener("submit", (e) => {
+            e.preventDefault();
+            window.location.href = "perfil.html";
+        });
+
+        // Simular registro y redirigir a perfil
+        document.getElementById("form-register").addEventListener("submit", (e) => {
+            e.preventDefault();
+            window.location.href = "perfil.html";
         });
     </script>
 </body>
