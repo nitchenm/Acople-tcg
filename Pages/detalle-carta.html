@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Carta - Acople TCG</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <link rel="stylesheet" href="/CSS/detalle-carta.css">
+    <link rel="stylesheet" href="/CSS/detalle-carta.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="brand">
+            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="/index.html" data-nav>Inicio</a></li>
+                <li><a href="/index.html#singles" data-nav>Singles</a></li>
+                <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
+                <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
+                <li><a href="#carrito" data-nav>Carrito</a></li>
+                <li><a href="login.html" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="detalle-carta-container">
+      <div class="detalle-carta-flex">
+        <div class="detalle-carta-img-col">
+          <img id="img-carta" src="" alt="" class="detalle-carta-img">
+        </div>
+        <div class="detalle-carta-info-col">
+          <h1 id="nombre-carta" class="detalle-carta-nombre"></h1>
+          <div class="detalle-carta-info-list">
+            <p><strong>Edición:</strong> <span id="edicion-carta"></span></p>
+            <p><strong>Rareza:</strong> <span id="rareza-carta"></span></p>
+            <p><strong>Precio:</strong> <span id="precio-carta"></span></p>
+            <p><strong>N° Coleccionista:</strong> <span id="coleccionista-carta"></span></p>
+            <p><strong>Tipo:</strong> <span id="tipo-carta"></span></p>
+          </div>
+          <div class="detalle-carta-descripcion">
+            <p id="descripcion-carta"></p>
+          </div>
+          <div id="detalle-error" class="detalle-carta-error"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+        <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/JS/cartas-data.js"></script>
+    <script>
+    // Leer el parámetro id de la URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const carta = (typeof cartas !== 'undefined' && Array.isArray(cartas)) ? cartas.find(c => c.id === id) : null;
+    if (carta) {
+      document.getElementById('nombre-carta').textContent = carta.nombre;
+      document.getElementById('img-carta').src = carta.imagen;
+      document.getElementById('img-carta').alt = carta.nombre;
+      document.getElementById('edicion-carta').textContent = carta.edicion;
+      document.getElementById('rareza-carta').textContent = carta.rareza;
+      document.getElementById('precio-carta').textContent = '$' + carta.precio.toLocaleString();
+      document.getElementById('descripcion-carta').textContent = carta.descripcion;
+      document.getElementById('coleccionista-carta').textContent = carta.coleccionista || '-';
+      document.getElementById('tipo-carta').textContent = carta.tipo || '-';
+    } else {
+      document.getElementById('detalle-error').textContent = 'No se encontró la carta solicitada.';
+    }
+    </script>
+</body>
+</html>

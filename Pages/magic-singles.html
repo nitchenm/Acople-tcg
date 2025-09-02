@@ -12,17 +12,16 @@
  <!-- HEADER / NAV -->
     <header role="banner">
         <div class="brand">
-            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <img src="/images/logo_acople.png" alt="Logo Acople TCG" class="logo">
             <p class="tagline">Mercado de cartas MTG y Pokémon</p>
         </div>
 
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html" data-nav>Inicio</a></li>
-                <li><a href="index.html#singles" data-nav>Singles</a></li>
-                <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
+                <li><a href="/index.html" data-nav>Inicio</a></li>
+                <li><a href="/index.html#singles" data-nav>Singles</a></li>
+                <li><a href="/Pages/productos-acople.html" data-nav>Otros Productos</a></li>
                 <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
-                <li><a href="#carrito" data-nav>Carrito</a></li>
                 <li><a href="login.html" data-nav>Ingresar</a></li>
             </ul>
         </nav>
@@ -88,8 +87,10 @@
             <div class="cards-grid">
                 <!-- Cartas en la ventana de busqueda -->
                 <article class="card">
-                    <img src="/images/black-lotus.webp" alt="Black Lotus">
-                    <h3>Black Lotus</h3>
+                    <a href="detalle-carta.html?id=black-lotus" class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/black-lotus.webp" alt="Black Lotus">
+                        <h3>Black Lotus</h3>
+                    </a>
                     <p>Edición: Urza Saga</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $120.000.000</p>
@@ -97,16 +98,20 @@
                 </article>
 
                 <article class="card">
-                    <img src="/images/time-walk.webp" alt="Time Walk">
-                    <h3>Time Walk</h3>
+                    <a href="detalle-carta.html?id=time-walk" class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/time-walk.webp" alt="Time Walk">
+                        <h3>Time Walk</h3>
+                    </a>
                     <p>Edición: Alpha</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $17.000.000</p>
                     <button>Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/gaea.jpg" alt="Gaea Cradle">
-                    <h3>Gaea Cradle</h3>
+                    <a href="detalle-carta.html?id=gaea-cradle" class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/gaea.jpg" alt="Gaea Cradle">
+                        <h3>Gaea Cradle</h3>
+                    </a>
                     <p>Edición: Alpha</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $1.349.999</p>
@@ -150,7 +155,11 @@
                     <p>Edición: Secret Lair</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $915.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Ugin, the Spirit Dragon"
+                    data-precio="915000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/magicSingles/the-one-ring-scroll.jpg" alt="The One Ring">
@@ -158,15 +167,23 @@
                     <p>Edición: The lord of the Rings: Tales of Middle earth</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $415.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="The One Ring (Scroll Edition)"
+                    data-precio="415000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/magicSingles/counterspell.avif" alt="Counterspell">
                     <h3>Counterspell (Foil)</h3>
                     <p>Edición: Secret Lair</p>
                     <p>Rareza: Rara</p>
-                    <p>Precio: $120.000</p>
-                    <button>Agregar al carrito</button>
+                    <p>Precio: $55.000</p>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Counterspell (Foil)"
+                    data-precio="55000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/magicSingles/pact of negation.jpg" alt="Pact Of Negation">
@@ -174,7 +191,11 @@
                     <p>Edición: Masterpiece Series: Invocations</p>
                     <p>Rareza: Mitica</p>
                     <p>Precio: $139.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Pact of Negation (AKH)"
+                    data-precio="139000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/magicSingles/Rhystic Study.avif" alt="Rhystic Study">
@@ -182,7 +203,11 @@
                     <p>Edición: Wilds of Eldraine Enchanting Tales</p>
                     <p>Rareza: Mitica</p>
                     <p>Precio: $129.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Rhystic Study"
+                    data-precio="129000"
+                    >Agregar al carrito</button>
                 </article>
 
             </div>
@@ -192,6 +217,31 @@
     <footer>
         <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Archivo js-->
+    <script src="/JS/carrito.js"></script>
+
+    <!-- Mini-carrito cargado dinámicamente -->
+    <div id="mini-carrito-container"></div>
+    <script>
+    fetch('/Pages/mini-carrito.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('mini-carrito-container').innerHTML = html;
+        // Inicialización de eventos del mini-carrito
+        document.getElementById('btn-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '0';
+          actualizarMiniCarrito();
+        };
+        document.getElementById('cerrar-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '-400px';
+        };
+        actualizarMiniCarrito();
+        window.addEventListener('storage', function(e) {
+          if (e.key === 'carrito') actualizarMiniCarrito();
+        });
+      });
+    </script>
 </body>
 
 </html>

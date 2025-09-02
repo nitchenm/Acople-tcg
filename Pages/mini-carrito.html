@@ -1,0 +1,66 @@
+<!-- Mini-carrito sidebar y botón flotante reutilizable -->
+<link rel="stylesheet" href="/CSS/carrito.css">
+
+<button id="btn-mini-carrito" class="mini-carrito-btn" aria-label="Ver carrito">
+    🛒
+    <span id="mini-carrito-cantidad" class="mini-carrito-cantidad">0</span>
+</button>
+<aside id="mini-carrito" class="mini-carrito-sidebar">
+    <header class="mini-carrito-header">
+        <h2>Carrito</h2>
+        <button id="cerrar-mini-carrito" class="mini-carrito-cerrar" aria-label="Cerrar">&times;</button>
+    </header>
+    <div id="mini-carrito-lista" class="mini-carrito-lista"></div>
+    <footer class="mini-carrito-footer">
+        <strong id="mini-carrito-total">Total: $0</strong>
+    </footer>
+</aside>
+<script>
+// Mini-carrito sidebar logic reutilizable
+function actualizarMiniCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const lista = document.getElementById('mini-carrito-lista');
+    const total = document.getElementById('mini-carrito-total');
+    const cantidad = document.getElementById('mini-carrito-cantidad');
+    if (lista && total && cantidad) {
+        if (carrito.length === 0) {
+            lista.innerHTML = '<p>El carrito está vacío.</p>';
+            total.textContent = 'Total: $0';
+            cantidad.textContent = '0';
+        } else {
+            let suma = 0;
+            lista.innerHTML = carrito.map((item, idx) => {
+                suma += item.precio * item.cantidad;
+                return `<div class='mini-carrito-item' style='display:flex;align-items:center;justify-content:space-between;margin-bottom:0.7rem;border-bottom:1px solid #eee;padding-bottom:0.5rem;'>
+                  <span>
+                    <strong>${item.nombre}</strong><br>
+                    <span class='mini-carrito-item-precio-unitario'>Precio unitario: $${item.precio.toLocaleString()}</span>
+                    <span style='display:flex;align-items:center;gap:4px;'>
+                      <button onclick=\"restarCantidadCarrito(${idx})\" class='mini-carrito-btn-cantidad' style=''>-</button>
+                      <small>Cantidad: ${item.cantidad}</small>
+                      <button onclick=\"sumarCantidadCarrito(${idx})\" class='mini-carrito-btn-cantidad' style=''>+</button>
+                    </span>
+                  </span>
+                  <span style='display:flex;align-items:center;'>
+                    <span style='margin-right:12px;'>$${(item.precio * item.cantidad).toLocaleString()}</span>
+                    <button onclick=\"eliminarDelCarrito(${idx})\" class='mini-carrito-btn-eliminar' style='display:flex;align-items:center;justify-content:center;' title='Eliminar'>&times;</button>
+                  </span>
+                </div>`;
+            }).join('');
+            total.textContent = 'Total: $' + suma.toLocaleString();
+            cantidad.textContent = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+        }
+    }
+}
+document.getElementById('btn-mini-carrito').onclick = function() {
+    document.getElementById('mini-carrito').style.right = '0';
+    actualizarMiniCarrito();
+};
+document.getElementById('cerrar-mini-carrito').onclick = function() {
+    document.getElementById('mini-carrito').style.right = '-400px';
+};
+actualizarMiniCarrito();
+window.addEventListener('storage', function(e) {
+    if (e.key === 'carrito') actualizarMiniCarrito();
+});
+</script>

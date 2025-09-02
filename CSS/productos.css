@@ -137,28 +137,225 @@ main.otros-productos {
     background-color: #388697; 
 }
 
-/* Estilos específicos para el playmat de Rayquaza */
-.playmat.rayquaza {
-    background-color: #e0f7fa; /* Fondo específico para Rayquaza */
-    border: 2px solid #00796b; /* Borde verde esmeralda */
+
+/* seccion para carpetas*/
+
+/* Grid contenedor de llos playmats*/
+.carpeta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4.3rem;
 }
 
-.playmat.rayquaza img {
-    border-radius: 10px 10px 0 0; /* Bordes redondeados solo en la parte superior */
+/* Estilos de cartas dentro del contenedor*/
+.carpeta {
+    background-color: #cce4dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    width: 250px;
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
-.playmat.rayquaza h3 {
-    color: #00796b; /* Título en verde esmeralda */
+.carpeta img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
 }
 
-.playmat.rayquaza p {
-    color: #555; /* Texto en gris oscuro */
+.carpeta h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
-.playmat.rayquaza button {
-    background-color: #00796b; /* Botón en verde esmeralda */
+.carpeta p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
 }
 
-.playmat.rayquaza button:hover {
-    background-color: #004d40; /* Verde más oscuro al pasar el mouse */
+.carpeta button {
+    background-color: #08415C; 
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.carpeta button:hover {
+    background-color: #388697; 
+}
+
+/* Estilos para protectores*/
+
+.protector-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4.3rem;
+}
+
+/* Estilos de cartas dentro del contenedor*/
+.protector {
+    background-color: #cce4dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    width: 250px;
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.protector img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.protector h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.protector p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.protector button {
+    background-color: #08415C; 
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.protector button:hover {
+    background-color: #388697; 
+}
+
+/* Estilos para portamazos */
+
+.portamazo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4.3rem;
+}
+
+/* Estilos de cartas dentro del contenedor*/
+.portamazo {
+    background-color: #cce4dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    width: 250px;
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.portamazo img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.portamazo h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.portamazo p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.portamazo button {
+    background-color: #08415C; 
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.portamazo button:hover {
+    background-color: #388697; 
+}
+
+
+/* Estilos para Dados */
+
+.portamazo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 4.3rem;
+}
+
+/* Estilos de cartas dentro del contenedor*/
+.dado {
+    background-color: #cce4dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+    width: 250px;
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.dado img {
+    width: 100%; 
+    height: auto; 
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+.dado h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dado p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.dado button {
+    background-color: #08415C; 
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.dado button:hover {
+    background-color: #388697; 
 }

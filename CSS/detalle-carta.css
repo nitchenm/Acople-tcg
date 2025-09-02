@@ -1,0 +1,94 @@
+/* Fix: Forzar layout horizontal y evitar herencia de display:flex/column de body o main */
+body, html {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a577a 0%, #2a4e92 30%, #9a48c9 100%);
+}
+.detalle-carta-container {
+    display: block;
+    box-sizing: border-box;
+}
+.detalle-carta-flex {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 2.5rem;
+    width: 100%;
+}
+.detalle-carta-img-col, .detalle-carta-info-col {
+    box-sizing: border-box;
+}
+.detalle-carta-info-col {
+    min-width: 280px;
+    max-width: 100%;
+}
+@media (max-width: 800px) {
+    .detalle-carta-flex {
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+}
+/* ===== Detalle Carta (Card Kingdom style) ===== */
+.detalle-carta-container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    background: #afd8eb;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px #88c9e722;
+    padding: 2.5rem 2rem;
+}
+.detalle-carta-flex {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+.detalle-carta-img-col {
+    flex: 0 0 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detalle-carta-img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0002;
+    background: #f8f8f8;
+}
+.detalle-carta-info-col {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.detalle-carta-nombre {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #054263;
+}
+.detalle-carta-info-list p {
+    margin: 0.2em 0;
+    font-size: 1.08rem;
+}
+.detalle-carta-descripcion {
+    margin-top: 1.2rem;
+    font-size: 1.1rem;
+    color: #0e0101;
+}
+.detalle-carta-error {
+    color: #CC2936;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+@media (max-width: 800px) {
+    .detalle-carta-flex {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .detalle-carta-img-col {
+        max-width: 100%;
+    }
+    .detalle-carta-img {
+        max-width: 100%;
+    }
+}

@@ -12,17 +12,16 @@
  <!-- HEADER / NAV -->
     <header role="banner">
         <div class="brand">
-            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <img src="/images/logo_acople.png" alt="Logo Acople TCG" class="logo">
             <p class="tagline">Mercado TCG</p>
         </div>
 
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html" data-nav>Inicio</a></li>
-                <li><a href="index.html#singles" data-nav>Singles</a></li>
+                <li><a href="/index.html" data-nav>Inicio</a></li>
+                <li><a href="/index.html#singles" data-nav>Singles</a></li>
                 <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
                 <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
-                <li><a href="#carrito" data-nav>Carrito</a></li>
                 <li><a href="login.html" data-nav>Ingresar</a></li>
             </ul>
         </nav>
@@ -92,7 +91,11 @@
                     <p>Edición: Team-Up</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $2.246.000</p>
-                    <button>Agregar al carrito</button>
+                    <button 
+                    class="add-to-cart"
+                    data-nombre="Latios & Latias GX"
+                    data-precio="2246000"
+                    >Agregar al carrito</button>
                 </article>
 
                 <article class="card">
@@ -101,7 +104,11 @@
                     <p>Edición: Evolving Skyes</p>
                     <p>Rareza: Secret Rare</p>
                     <p>Precio: $1.298.500</p>
-                    <button>Agregar al carrito</button>
+                    <button 
+                    class="add-to-cart"
+                    data-nombre="Umbreon Vmax"
+                    data-precio="1298500"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/mewtwo.jpg" alt="Mewtwo">
@@ -109,7 +116,11 @@
                     <p>Edición: Holon Phantoms</p>
                     <p>Rareza: Ultra Rare</p>
                     <p>Precio: $9.500.000</p>
-                    <button>Agregar al carrito</button>
+                    <button 
+                    class="add-to-cart"
+                    data-nombre="Mewtwo Star"
+                    data-precio="9500000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/Charizard-ex.webp" alt="Charizard Ex">
@@ -117,7 +128,11 @@
                     <p>Edición: Scarlet & Violet</p>
                     <p>Rareza: Ultra Rare</p>
                     <p>Precio: $1.300.000</p>
-                    <button>Agregar al carrito</button>
+                    <button 
+                    class="add-to-cart"
+                    data-nombre="Charizard ex (Japan ver.)"
+                    data-precio="1300000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/pokemonSingles/shiny tyranitar.jpg" alt="Shining Tyranitar">
@@ -125,7 +140,11 @@
                     <p>Edición: Neo Destiny</p>
                     <p>Rareza: Secret Rare</p>
                     <p>Precio: $1.700.000</p>
-                    <button>Agregar al carrito</button>
+                    <button 
+                    class="add-to-cart"
+                    data-nombre="Shining Tyranitar"
+                    data-precio="1700000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/pokemonSingles/Pikachu.jpg" alt="Pikachu">
@@ -133,7 +152,11 @@
                     <p>Edición: Sword & Shield</p>
                     <p>Rareza: Promo</p>
                     <p>Precio: $950.000</p>
-                    <button>Agregar al carrito</button>
+                    <button 
+                    class="add-to-cart"
+                    data-nombre="Pikachu (Japan ver.)"
+                    data-precio="950000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <img src="/images/pokemonSingles/mew.jpg" alt="Mew Ex">
@@ -141,7 +164,11 @@
                     <p>Edición: Paldean Fates (PAF)</p>
                     <p>Rareza:  Special Illustration Rare</p>
                     <p>Precio: $520.000</p>
-                    <button>Agregar al carrito</button>
+                    <button 
+                    class="add-to-cart"
+                    data-nombre="Mew Ex"
+                    data-precio="520000"
+                    >Agregar al carrito</button>
                 </article>
 
             </div>
@@ -151,6 +178,30 @@
     <footer>
         <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
     </footer>
-</body>
 
+    <!-- Archivo js-->
+    <script src="/JS/carrito.js"></script>
+
+    <!-- Mini-carrito cargado dinámicamente -->
+    <div id="mini-carrito-container"></div>
+    <script>
+    fetch('/Pages/mini-carrito.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('mini-carrito-container').innerHTML = html;
+        // Inicialización de eventos del mini-carrito
+        document.getElementById('btn-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '0';
+          actualizarMiniCarrito();
+        };
+        document.getElementById('cerrar-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '-400px';
+        };
+        actualizarMiniCarrito();
+        window.addEventListener('storage', function(e) {
+          if (e.key === 'carrito') actualizarMiniCarrito();
+        });
+      });
+    </script>
+</body>
 </html>

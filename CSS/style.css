@@ -45,6 +45,8 @@ Blue munsali : #388697
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-tcg:hover {
@@ -87,6 +89,8 @@ Blue munsali : #388697
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    margin-top: auto;
+    
 }
 
 .card-tcg .card-link:hover {
@@ -94,6 +98,7 @@ Blue munsali : #388697
     color: #08415C;
     box-shadow: 0 0 12px rgba(57, 4, 117, 0.7);
 }
+
 
 /* tweaks responsivo*/
 @media (max-width: 700px) {
@@ -223,4 +228,57 @@ footer {
     margin-top: 3rem;
     border-top: 2px solid #EBBAB9;
     font-size: 0.9rem;
+}
+
+/* Estilos para el mini-carrito sidebar */
+#mini-carrito-lista div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 0.7rem 0.5rem;
+}
+#mini-carrito-lista strong {
+    color: #08415C;
+    font-size: 1.05rem;
+}
+#mini-carrito-lista small {
+    color: #388697;
+    font-size: 0.95rem;
+}
+#mini-carrito-lista button[title='Eliminar'] {
+    background: #CC2936;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#mini-carrito-lista button[title='Eliminar']:hover {
+    background: #a81e2a;
+}
+
+/* Fondo semitransparente para el mini-carrito sidebar */
+#mini-carrito {
+    background: rgba(255,255,255,0.95) !important;
+    /* El !important asegura que sobrescriba el inline style */
+}
+
+/* Mostrar el precio unitario en cada producto del mini-carrito */
+#mini-carrito-lista .mini-carrito-item-precio-unitario {
+    color: #388697;
+    font-size: 0.97rem;
+    margin-left: 2px;
+    display: block;
 }

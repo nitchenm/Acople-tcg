@@ -12,17 +12,16 @@
  <!-- HEADER / NAV -->
     <header role="banner">
         <div class="brand">
-            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <img src="/images/logo_acople.png" alt="Logo Acople TCG" class="logo">
             <p class="tagline">Mercado de cartas MTG y Pokémon</p>
         </div>
 
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html" data-nav>Inicio</a></li>
-                <li><a href="index.html#singles" data-nav>Singles</a></li>
+                <li><a href="/index.html" data-nav>Inicio</a></li>
+                <li><a href="/index.html#singles" data-nav>Singles</a></li>
                 <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
                 <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
-                <li><a href="#carrito" data-nav>Carrito</a></li>
                 <li><a href="login.html" data-nav>Ingresar</a></li>
             </ul>
         </nav>
@@ -34,6 +33,23 @@
     </header>
 
     <main class="otros-productos">
+        <!-- Botón flotante de carrito -->
+        <button id="btn-mini-carrito" aria-label="Ver carrito" style="position:fixed;bottom:32px;right:32px;z-index:1001;background:#CC2936;color:#fff;border:none;border-radius:50%;width:56px;height:56px;box-shadow:0 2px 8px #0002;font-size:2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;">
+            🛒
+            <span id="mini-carrito-cantidad" style="position:absolute;top:8px;right:8px;background:#fff;color:#CC2936;border-radius:50%;padding:2px 7px;font-size:0.9rem;font-weight:bold;">0</span>
+        </button>
+        <!-- Mini-carrito sidebar -->
+        <aside id="mini-carrito" style="position:fixed;top:0;right:-400px;width:340px;height:100vh;background:#fff;box-shadow:-4px 0 16px #0002;z-index:1002;transition:right 0.3s;display:flex;flex-direction:column;">
+            <header style="padding:1rem;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;">
+                <h2 style="margin:0;font-size:1.2rem;color:#08415C;">Carrito</h2>
+                <button id="cerrar-mini-carrito" aria-label="Cerrar" style="background:none;border:none;font-size:1.5rem;cursor:pointer;color:#CC2936;">&times;</button>
+            </header>
+            <div id="mini-carrito-lista" style="flex:1;overflow-y:auto;padding:1rem;"></div>
+            <footer style="padding:1rem;border-top:1px solid #eee;">
+                <strong id="mini-carrito-total">Total: $0</strong>
+            </footer>
+        </aside>
+
         <!-- Barra lateral de filtros -->
         <aside class="filters">
             <h2>Filtros</h2>
@@ -114,6 +130,158 @@
                     <p>Precio: $47.000</p>
                     <button>Agregar al carrito</button>
                 </article>
+                <article class="carpeta">
+                    <img src="/images/productos/carpetas/carpeta negra dragonshield.webp" alt="Carpeta negra">
+                    <h3>Carpeta Negra Dragon Shield</h3>
+                    <p>Producto: Carpeta</p>
+                    <p>Marca: DragonShield</p>
+                    <p>Precio: $25.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="carpeta">
+                    <img src="/images/productos/carpetas/carpeta roja dragonshield.webp" alt="Carpeta roja">
+                    <h3>Carpeta Roja Dragon Shield</h3>
+                    <p>Producto: Carpeta</p>
+                    <p>Marca: DragonShield</p>
+                    <p>Precio: $25.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="carpeta">
+                    <img src="/images/productos/carpetas/carpeta verde dragonshield.webp" alt="Carpeta verde">
+                    <h3>Carpeta Verde Dragon Shield</h3>
+                    <p>Producto: Carpeta</p>
+                    <p>Marca: DragonShield</p>
+                    <p>Precio: $25.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="carpeta">
+                    <img src="/images/productos/carpetas/cactuar carpeta.webp" alt="Carpeta Cactuar">
+                    <h3>Carpeta Cactuar</h3>
+                    <p>Producto: Carpeta</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $18.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="protector">
+                    <img src="/images/productos/protectores/sleeve knights of round.webp" alt="Protectores knights of round ">
+                    <h3>Protectores Summon: Knights of Round - MTG </h3>
+                    <p>Producto: Protector</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $16.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="protector">
+                    <img src="/images/productos/protectores/slevee bahamut.webp" alt="Protectores Bahamut ">
+                    <h3>Protectores Summon: Bahamut - MTG </h3>
+                    <p>Producto: Protector</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $17.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="protector">
+                    <img src="/images/productos/protectores/slevee odin.webp" alt="Protectores Odin ">
+                    <h3>Protectores Summon: Odin - MTG </h3>
+                    <p>Producto: Protector</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $17.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="protector">
+                    <img src="/images/productos/protectores/sleeve charmander.webp" alt="Protectores Charmander ">
+                    <h3>Protectores Charmander </h3>
+                    <p>Producto: Protector</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $12.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="protector">
+                    <img src="/images/productos/protectores/sleeves lapras.webp" alt="Protectores Lapras ">
+                    <h3>Protectores Lapras </h3>
+                    <p>Producto: Protector</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $10.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="portamazo">
+                    <img src="/images/productos/portamazos/portamazo charmander.webp" alt="Portamazo Charmander ">
+                    <h3>Portamazo Charmander </h3>
+                    <p>Producto: Portamazo</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $40.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="portamazo">
+                    <img src="/images/productos/portamazos/dragonshield dark grey.webp" alt="Portamazo Dragonshield Dark Grey ">
+                    <h3>Portamazo Dragonshield Dark Grey</h3>
+                    <p>Producto: Portamazo</p>
+                    <p>Marca: Dragon Shield</p>
+                    <p>Precio: $20.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="portamazo">
+                    <img src="/images/productos/portamazos/portamazo morado.webp" alt="Portamazo Royal Purple ">
+                    <h3>Portamazo Royal Purple</h3>
+                    <p>Producto: Portamazo</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $6.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="portamazo">
+                    <img src="/images/productos/portamazos/tarkir protamazo.webp" alt="Portamazo Tarkir Dragonstorm Eshki, Temur’s Roar  ">
+                    <h3>Portamazo Tarkir Dragonstorm Eshki, Temur’s Roar</h3>
+                    <p>Producto: Portamazo</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $9.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="portamazo">
+                    <img src="/images/productos/portamazos/sephiroth portamazo.webp" alt="Portamazo Sephiroth ">
+                    <h3>Portamazo Sephiroth FINAL FANTASY</h3>
+                    <p>Producto: Portamazo</p>
+                    <p>Marca: Ultra Pro</p>
+                    <p>Precio: $36.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="dado">
+                    <img src="/images/productos/dados/dados gryffindor.jpg" alt="Dados Gryffindor ">
+                    <h3>Set D7 Dados: Harry Potter - Gryffindor Red</h3>
+                    <p>Producto: Portamazo</p>
+                    <p>Marca: Q Workshop</p>
+                    <p>Precio: $19.000</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="dado">
+                    <img src="/images/productos/dados/dados celestes dragon.avif" alt="Dados Dragon Celestes ">
+                    <h3>Dados Dragon Celestes - Gryffindor Red</h3>
+                    <p>Producto: Portamazo</p>
+                    <p>Marca: Custom</p>
+                    <p>Precio: $2.700</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="dado">
+                    <img src="/images/productos/dados/dados runas.avif" alt="Dados Runas">
+                    <h3>Dados Dragon Runas</h3>
+                    <p>Producto: Dados</p>
+                    <p>Marca: Custom</p>
+                    <p>Precio: $4.600</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="dado">
+                    <img src="/images/productos/dados/dados lotr.avif" alt="Dados Lord of the Rings">
+                    <h3>Dados Lord of the Rings</h3>
+                    <p>Producto: Dados</p>
+                    <p>Marca: Custom</p>
+                    <p>Precio: $7.500</p>
+                    <button>Agregar al carrito</button>
+                </article>
+                <article class="dado">
+                    <img src="/images/productos/dados/dados morado dorado.avif" alt="Dados Morado dorado">
+                    <h3>Dados Purple Gold</h3>
+                    <p>Producto: Dados</p>
+                    <p>Marca: Custom</p>
+                    <p>Precio: $3.500</p>
+                    <button>Agregar al carrito</button>
+                </article>
             </div>
         </section>
     </main>
@@ -121,6 +289,28 @@
     <footer>
         <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
     </footer>
+    <script src="/JS/carrito.js"></script>
+    <!-- Mini-carrito cargado dinámicamente -->
+    <div id="mini-carrito-container"></div>
+    <script>
+    fetch('/Pages/mini-carrito.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('mini-carrito-container').innerHTML = html;
+        // Inicialización de eventos del mini-carrito
+        document.getElementById('btn-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '0';
+          actualizarMiniCarrito();
+        };
+        document.getElementById('cerrar-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '-400px';
+        };
+        actualizarMiniCarrito();
+        window.addEventListener('storage', function(e) {
+          if (e.key === 'carrito') actualizarMiniCarrito();
+        });
+      });
+    </script>
 </body>
 
 </html>

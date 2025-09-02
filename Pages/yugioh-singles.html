@@ -18,17 +18,16 @@ tambien los Alt que se manejan son de cartas de magic no de yughi , por lo cual 
  <!-- HEADER / NAV -->
     <header role="banner">
         <div class="brand">
-            <img src="/images/acople-tcg.png" alt="Logo Acople TCG" class="logo">
+            <img src="/images/logo_acople.png" alt="Logo Acople TCG" class="logo">
             <p class="tagline">Mercado de cartas MTG y Pokémon</p>
         </div>
 
         <nav aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html" data-nav>Inicio</a></li>
-                <li><a href="index.html#singles" data-nav>Singles</a></li>
+                <li><a href="/index.html" data-nav>Inicio</a></li>
+                <li><a href="/index.html#singles" data-nav>Singles</a></li>
                 <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
                 <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
-                <li><a href="#carrito" data-nav>Carrito</a></li>
                 <li><a href="login.html" data-nav>Ingresar</a></li>
             </ul>
         </nav>
@@ -134,6 +133,29 @@ tambien los Alt que se manejan son de cartas de magic no de yughi , por lo cual 
     <footer>
         <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="/JS/mini-carrito.js"></script>
+    <!-- Mini-carrito cargado dinámicamente -->
+    <div id="mini-carrito-container"></div>
+    <script>
+    fetch('/Pages/mini-carrito.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('mini-carrito-container').innerHTML = html;
+        // Inicialización de eventos del mini-carrito
+        document.getElementById('btn-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '0';
+          actualizarMiniCarrito();
+        };
+        document.getElementById('cerrar-mini-carrito').onclick = function() {
+          document.getElementById('mini-carrito').style.right = '-400px';
+        };
+        actualizarMiniCarrito();
+        window.addEventListener('storage', function(e) {
+          if (e.key === 'carrito') actualizarMiniCarrito();
+        });
+      });
+    </script>
 </body>
 
 </html>
