@@ -1,0 +1,131 @@
+/* Header mantiene mismo estilo que index */
+header[role=banner] {
+    background-image: url('/images/TopTCG_BANNER.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 60px 0 18%;
+    text-align: center;
+    box-shadow: inset 0 -50px 100px rgba(0,0,0,0.6);
+}
+
+/* Carrusel de Guías y Estrategias */
+#guias {
+    padding: 2rem;
+    text-align: center;
+}
+
+#guias-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #C597E4;
+    text-shadow: 0 0 8px rgba(18,19,20,0.5);
+}
+
+.carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    background: rgba(17,0,114,0.1);
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    color: #E9DBDB;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control {
+    background: rgba(152,72,201,0.8);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    border-radius: 6px;
+}
+
+/* Comentarios de la comunidad */
+#comentarios {
+    padding: 2rem;
+    text-align: center;
+}
+
+#comentarios-title {
+    font-size: 2rem;
+    color: #C597E4;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 8px rgba(18,19,20,0.5);
+}
+
+.comentario {
+    background: rgba(152,72,201,0.2);
+    color: #C597E4;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 700px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.comentario .usuario {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.acciones button {
+    background: rgba(17,0,114,0.2);
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    margin: 0 0.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.acciones button span {
+    margin-left: 0.2rem;
+}
+
+/* Caja para nuevo comentario */
+#nuevo-comentario {
+    margin-top: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#nuevo-comentario input,
+#nuevo-comentario textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+#nuevo-comentario button {
+    background: #9A48C9;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
