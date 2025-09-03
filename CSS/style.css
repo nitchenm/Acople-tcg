@@ -1,11 +1,19 @@
 /* Paleta de colores del proyecto
-indigo eye : #08415C
-persian red: #CC2936
-tea rose: #EBBAB9
-Blue munsali : #388697
-
+    - Azul oscuro: #08415C
+    - Azul medio: #286D8D
+    - Azul claro: #388697
+    - Gris claro: #F5F5F5
+    - Gris medio: #E6E6E6
+    - Gris oscuro: #292525
+    - Naranja brillante: #D97D54
+    - Naranja suave: #EFA58B
+    - Púrpura vibrante: #9A48C9
+    - Púrpura suave: #C597E4
+    - Rosa brillante: #EBBAB9
+    - Rosa suave: #F2D1D1
+    - Amarillo dorado: #DFAC4D
+    - Amarillo suave: #E9DBDB
 */
-
 
 /* Logo de la tienda*/
 
@@ -38,6 +46,9 @@ Blue munsali : #388697
 }
 
 .card-tcg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final */
     background: linear-gradient(160deg, #f5f5f5, #e6e6e6);
     border-radius: 18px;
     box-shadow: 0 6px 18px rgba(8,65,92,0.25);
@@ -52,35 +63,56 @@ Blue munsali : #388697
     box-shadow: 0 12px 28px rgba(41, 166, 204, 0.4);
 }
 
+/* Imagen arriba */
 .card-tcg .card-img {
     width: 100%;
-    height: auto;
+    height: 180px;
     object-fit: contain;
     border-bottom: 2px solid #ccc;
+    background: #fff; /* para que todas tengan base uniforme */
 }
 
-.card-tcg .card-title {
+/* Contenido flexible */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* para ocupar el alto de la card */
+    padding: 1rem;
+}
+
+/* Bloque de info (título, marca, desc) */
+.card-info {
+    flex-grow: 1; /* ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* Estilos de textos */
+.card-title {
     font-size: 1.2rem;
     font-weight: bold;
     color: #286d8d;
-    margin: 1rem 0 0.3rem;
 }
 
-.card-tcg .card-meta {
+.card-meta {
     font-size: 0.9rem;
     color: #388697;
 }
 
-.card-tcg .card-desc {
+
+.card-desc {
     font-size: 0.9rem;
     color: #292525;
-    margin: 0.5rem 1rem 1rem;
+    margin-top: 0.5rem;
 }
 
-.card-tcg .card-link {
-    display: inline-block;
-    margin: 1rem auto 1.5rem;
-    padding: 0.5em 1.5em;
+/* Botón fijo abajo */
+.card-link {
+    margin-top: auto; /* fuerza el botón abajo */
+    display: block;
+    padding: 0.6em 1.5em;
     background: linear-gradient(135deg, #458ae6, #EBBAB9);
     color: #fff;
     border-radius: 8px;
@@ -89,7 +121,7 @@ Blue munsali : #388697
     transition: all 0.3s ease;
 }
 
-.card-tcg .card-link:hover {
+.card-link:hover {
     background: linear-gradient(135deg, #4e50b6d3, #b02ace);
     color: #08415C;
     box-shadow: 0 0 12px rgba(57, 4, 117, 0.7);
@@ -107,6 +139,7 @@ Blue munsali : #388697
 h1, h2, h3, h4 {
     color: #e9dbdb;
     text-align: center;
+    font-weight: bold;
     text-shadow: 0 0 8px rgb(18, 19, 20);
 }
 
@@ -137,19 +170,40 @@ header[role=banner] {
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    padding: 60px 0 18%;
+    /*padding: 60px 0 18%;*/
     text-align: center;
     box-shadow: inset 0 -50px 100px rgba(0, 0, 0, 0.6);
 }
 
+/* Contenedor del logo + tagline */
+header[role=banner] .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Tagline */
+header[role=banner] .tagline {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #f5f5f5;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
 /* Nav bar horizontal owo*/
 /* Nav bar mágico */
+/* --- NAVBAR sticky --- */
 nav[aria-label="Navegación principal"] {
-    background: rgba(8,65,92,0.85);
-    padding: 1em 0;
+    background: rgba(8,65,92,0.95);
+    padding: 0.8em 0;
     backdrop-filter: blur(6px);
     border-top: 2px solid #EBBAB9;
     border-bottom: 2px solid #EBBAB9;
+    position: sticky;   /* se queda pegada */
+    top: 0;             /* siempre visible arriba */
+    z-index: 1000;
 }
 
 nav[aria-label="Navegación principal"] ul {
@@ -223,4 +277,57 @@ footer {
     margin-top: 3rem;
     border-top: 2px solid #EBBAB9;
     font-size: 0.9rem;
+}
+
+/* Estilos para el mini-carrito sidebar */
+#mini-carrito-lista div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 0.7rem 0.5rem;
+}
+#mini-carrito-lista strong {
+    color: #08415C;
+    font-size: 1.05rem;
+}
+#mini-carrito-lista small {
+    color: #388697;
+    font-size: 0.95rem;
+}
+#mini-carrito-lista button[title='Eliminar'] {
+    background: #CC2936;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#mini-carrito-lista button[title='Eliminar']:hover {
+    background: #a81e2a;
+}
+
+/* Fondo semitransparente para el mini-carrito sidebar */
+#mini-carrito {
+    background: rgba(255,255,255,0.95) !important;
+    /* El !important asegura que sobrescriba el inline style */
+}
+
+/* Mostrar el precio unitario en cada producto del mini-carrito */
+#mini-carrito-lista .mini-carrito-item-precio-unitario {
+    color: #388697;
+    font-size: 0.97rem;
+    margin-left: 2px;
+    display: block;
 }

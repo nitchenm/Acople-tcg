@@ -1,36 +1,54 @@
-/* Estilos para la página Magic Singles */
-
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5; /* Fondo claro */
 }
 
-header {
-    background-color: #08415C; /* Indigo Eye */
+/* Body y header */
+body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0a577a 0%, #2a4e92 30%, #9a48c9 100%);
     color: #fff;
-    padding: 1rem;
+    overflow-x: hidden;
+}
+
+header[role="banner"] {
+    background-color: #4a90a5; /* Azul verdoso suave para el header */
+    color: #fff;
+    padding: 1rem 0;
     text-align: center;
 }
 
-main.magic-singles {
+header h1 {
+    margin: 1rem 0;
+}
+
+/* Main layout */
+main.otros-productos {
     display: flex;
-    margin: 2rem;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 /* Barra lateral de filtros */
 .filters {
     width: 20%;
-    background-color: #bcccca; /* Fondo claro para filtros */
+    background-color: #d9f0f0; /* Verde azulado claro */
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
 }
 
 .filters h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: #3a5a6a; /* Azul verdoso más oscuro para títulos */
 }
 
 .filters form {
@@ -39,100 +57,125 @@ main.magic-singles {
     gap: 1rem;
 }
 
-.filters fieldset {
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-
-.filters legend {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
 .filters select,
 .filters input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.6rem;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    font-size: 0.95rem;
 }
 
 .filters button {
-    background-color: #CC2936; /* Persian Red */
+    background-color: #f1a87c; /* Coral suave */
     color: #fff;
     border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
+    padding: 0.7rem;
+    border-radius: 8px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .filters button:hover {
-    background-color: #EBBAB9; /* Tea Rose */
+    background-color: #f3c1a0; /* Más claro al hover */
+    transform: translateY(-2px);
 }
 
 /* Resultados de búsqueda */
 .results {
     width: 80%;
-    padding: 1rem;
 }
 
 .results h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #4a90a5; /* Encabezado azul verdoso suave */
 }
 
-/* Grid contenedor de las cartas*/
-.cards-grid {
+/* Contenedores de productos en grid */
+.playmat-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 4.3rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
 }
 
-/* Estilos de cartas dentro del contenedor*/
-.card {
-    background-color: #cce4dc;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Estilo general para todas las cartas */
+.playmat, .carpeta, .protector, .portamazo, .dado {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     overflow: hidden;
-    text-align: center;
-    padding: 1rem;
-    width: 250px;
-    height: auto;
-    padding: 0.5rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 1rem;
+    cursor: pointer;
 }
 
-.card img {
-    width: 100%; 
-    height: auto; 
-    border-bottom: 1px solid #ccc;
+.playmat:hover, .carpeta:hover, .protector:hover, .portamazo:hover, .dado:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* Imagen del producto */
+.playmat img, .carpeta img, .protector img, .portamazo img, .dado img {
+    width: 100%;
+    border-radius: 12px;
     margin-bottom: 1rem;
+    object-fit: cover;
 }
 
-.card h3 {
+/* Títulos y descripción */
+.playmat h3, .carpeta h3, .protector h3, .portamazo h3, .dado h3 {
     font-size: 1.2rem;
+    color: #3a5a6a; /* Azul verdoso más oscuro */
+    text-align: center;
     margin-bottom: 0.5rem;
 }
 
-.card p {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+.playmat p, .carpeta p, .protector p, .portamazo p, .dado p {
+    font-size: 0.95rem;
+    color: #555; /* Gris oscuro para mejor lectura */
+    margin: 0.25rem 0;
+    text-align: center;
 }
 
-.card button {
-    background-color: #08415C; 
+/* Botones de agregar al carrito */
+.playmat button, .carpeta button, .protector button, .portamazo button, .dado button {
+    background-color: #a986d4; /* Morado suave */
     color: #fff;
     border: none;
-    padding: 0.5rem;
-    border-radius: 4px;
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
     margin-top: auto;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.card button:hover {
-    background-color: #388697; 
+.playmat button:hover, .carpeta button:hover, .protector button:hover, .portamazo button:hover, .dado button:hover {
+    background-color: #c0a6e5; /* Morado más claro al hover */
+    transform: translateY(-2px);
+}
+
+/* Ajustes responsive */
+@media screen and (max-width: 1024px) {
+    main.otros-productos {
+        flex-direction: column;
+    }
+
+    .filters {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .results {
+        width: 100%;
+    }
+
+    .playmat-grid {
+        gap: 1.5rem;
+    }
 }

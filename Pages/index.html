@@ -15,7 +15,7 @@
       <!-- HEADER / NAV -->
     <header role="banner">
         <div class="brand">
-            <img src="/images/aiease_1756538997135.png" alt="Logo Acople TCG" class="logo">
+            <img src="/images/logo_acople.png" alt="Logo Acople TCG" class="logo">
             <p class="tagline">Mercado de cartas MTG y Pokémon</p>
         </div>
 
@@ -23,10 +23,9 @@
             <ul>
                 <li><a href="index.html" data-nav>Inicio</a></li>
                 <li><a href="#singles" data-nav>Singles</a></li>
-                <li><a href="productos-acople.html" data-nav>Otros Productos</a></li>
-                <li><a href="#blog" data-nav>Guía & Estrategias</a></li>
-                <li><a href="#carrito" data-nav>Carrito</a></li>
-                <li><a href="login.html" data-nav>Ingresar</a></li>
+                <li><a href="/Pages/productos-acople.html" data-nav>Otros Productos</a></li>
+                <li><a href="/Pages/blog.html" data-nav>Guía & Estrategias</a></li>
+                <li><a href="/Pages/login.html" data-nav>Ingresar</a></li>
             </ul>
         </nav>
     </header>
@@ -44,71 +43,70 @@
             </form>
 
             <section aria-labelledby="home-destacados-title">
-                            <h3 id="home-destacados-title">Cartas destacadas de hoy</h3>
-                            <ul class="cards-gallery" data-test-id="home-destacados">
-                                                <!-- Magic: The Gathering -->
-                                                <li class="card-tcg">
-                                                    <img src="/images/black-lotus.webp" alt="MTG: Black Lotus" class="card-img">
-                                                    <div class="card-title">Black Lotus</div>
-                                                    <div class="card-meta">Magic: The Gathering</div>
-                                                    <div class="card-desc">La carta más icónica y valiosa de MTG.</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C01">Ver detalle</a>
-                                                </li>
-                                                <li class="card-tcg">
-                                                    <img src="/images/the-one-ring.jpg" alt="MTG: The One ring " class="card-img">
-                                                    <div class="card-title">The One Ring Scroll Edition</div>
-                                                    <div class="card-meta">Magic: The Gathering</div>
-                                                    <div class="card-desc">La carta mas iconica de la expansion de LOTR esta aqui!</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C03">Ver detalle</a>
-                                                </li>
-                                                <li class="card-tcg">
-                                                    <img src="/images/time-walk.webp" alt="MTG: Time Walk" class="card-img">
-                                                    <div class="card-title">Time Walk</div>
-                                                    <div class="card-meta">Magic: The Gathering</div>
-                                                    <div class="card-desc">Permite tomar un turno extra, carta de poder histórico.</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C04">Ver detalle</a>
-                                                </li>
+                <h3 id="home-destacados-title">Cartas destacadas de hoy</h3>
+                <ul class="cards-gallery" data-test-id="home-destacados">
+                    <!-- Magic: The Gathering -->
+                    <li class="card-tcg">
+                        <img src="/images/black-lotus.webp" alt="MTG: Black Lotus" class="card-img">
+                        <div class="card-title">Black Lotus</div>
+                        <div class="card-meta">Magic: The Gathering</div>
+                        <div class="card-desc">La carta más icónica y valiosa de MTG.</div>
+                        <a href="/Pages/detalle-carta.html?id=black-lotus" class="card-link" data-action="ver-detalle" data-id="C01">Ver detalle</a>
+                    </li>
+                    <li class="card-tcg">
+                        <img src="/images/the-one-ring.jpg" alt="MTG: The One ring " class="card-img">
+                        <div class="card-title">The One Ring Scroll Edition</div>
+                        <div class="card-meta">Magic: The Gathering</div>
+                        <div class="card-desc">La carta mas iconica de la expansion de LOTR esta aqui!</div>
+                        <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C03">Ver detalle</a>
+                    </li>
+                    <li class="card-tcg">
+                        <img src="/images/time-walk.webp" alt="MTG: Time Walk" class="card-img">
+                        <div class="card-title">Time Walk</div>
+                        <div class="card-meta">Magic: The Gathering</div>
+                        <div class="card-desc">Permite tomar un turno extra, carta de poder histórico.</div>
+                        <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="C04">Ver detalle</a>
+                    </li>
 
-                                                <!-- Pokémon -->
-                                                <li class="card-tcg">
-                                                    <img src="/images/Charizard-ex.webp" alt="Pokémon: Shiny Charizard GX" class="card-img">
-                                                    <div class="card-title">Shiny Charizard GX</div>
-                                                    <div class="card-meta">Pokémon</div>
-                                                    <div class="card-desc">Una de las cartas más buscadas y valiosas de Pokémon.</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P01">Ver detalle</a>
-                                                </li>
-                                                <li class="card-tcg">
-                                                    <img src="/images/Pokémon_Illustrator.png" alt="Pokémon: Pikachu Illustrator" class="card-img">
-                                                    <div class="card-title">Pikachu Illustrator</div>
-                                                    <div class="card-meta">Pokémon</div>
-                                                    <div class="card-desc">La carta más rara y exclusiva de Pokémon.</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P02">Ver detalle</a>
-                                                </li>
-                                                <li class="card-tcg">
-                                                    <img src="/images/mewtwo.jpg" alt="Pokémon: Mewtwo EX" class="card-img">
-                                                    <div class="card-title">Mewtwo EX</div>
-                                                    <div class="card-meta">Pokémon</div>
-                                                    <div class="card-desc">Poderoso Pokémon legendario, favorito de muchos fans.</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P03">Ver detalle</a>
-                                                </li>
+                    <!-- Pokémon -->
+                    <li class="card-tcg">
+                        <img src="/images/Charizard-ex.webp" alt="Pokémon: Shiny Charizard GX" class="card-img">
+                        <div class="card-title">Shiny Charizard GX</div>
+                        <div class="card-meta">Pokémon</div>
+                        <div class="card-desc">Una de las cartas más buscadas y valiosas de Pokémon.</div>
+                        <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P01">Ver detalle</a>
+                    </li>
+                    <li class="card-tcg">
+                        <img src="/images/Pokémon_Illustrator.png" alt="Pokémon: Pikachu Illustrator" class="card-img">
+                        <div class="card-title">Pikachu Illustrator</div>
+                        <div class="card-meta">Pokémon</div>
+                        <div class="card-desc">La carta más rara y exclusiva de Pokémon.</div>
+                        <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P02">Ver detalle</a>
+                    </li>
+                    <li class="card-tcg">
+                        <img src="/images/mewtwo.jpg" alt="Pokémon: Mewtwo EX" class="card-img">
+                        <div class="card-title">Mewtwo EX</div>
+                        <div class="card-meta">Pokémon</div>
+                        <div class="card-desc">Poderoso Pokémon legendario, favorito de muchos fans.</div>
+                        <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="P03">Ver detalle</a>
+                    </li>
 
-                                                <!-- Yu-Gi-Oh! -->
-                                                <li class="card-tcg">
-                                                    <img src="/images/blue-eyes-dragon.jpg" alt="Yu-Gi-Oh!: Blue-Eyes White Dragon" class="card-img">
-                                                    <div class="card-title">Blue-Eyes White Dragon</div>
-                                                    <div class="card-meta">Yu-Gi-Oh!</div>
-                                                    <div class="card-desc">El dragón más famoso y poderoso del universo Yu-Gi-Oh!.</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="Y01">Ver detalle</a>
-                                                </li>
-                                                <li class="card-tcg">
-                                                    <img src="/images/dark-magician.jpg" alt="Yu-Gi-Oh!: Dark Magician" class="card-img">
-                                                    <div class="card-title">Dark Magician</div>
-                                                    <div class="card-meta">Yu-Gi-Oh!</div>
-                                                    <div class="card-desc">El mago emblemático de la serie y pieza clave en duelos.</div>
-                                                    <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="Y02">Ver detalle</a>
-                                                </li>
-                                                
-                            </ul>
+                    <!-- Yu-Gi-Oh! -->
+                    <li class="card-tcg">
+                        <img src="/images/blue-eyes-dragon.jpg" alt="Yu-Gi-Oh!: Blue-Eyes White Dragon" class="card-img">
+                        <div class="card-title">Blue-Eyes White Dragon</div>
+                        <div class="card-meta">Yu-Gi-Oh!</div>
+                        <div class="card-desc">El dragón más famoso y poderoso del universo Yu-Gi-Oh!.</div>
+                        <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="Y01">Ver detalle</a>
+                    </li>
+                    <li class="card-tcg">
+                        <img src="/images/dark-magician.jpg" alt="Yu-Gi-Oh!: Dark Magician" class="card-img">
+                        <div class="card-title">Dark Magician</div>
+                        <div class="card-meta">Yu-Gi-Oh!</div>
+                        <div class="card-desc">El mago emblemático de la serie y pieza clave en duelos.</div>
+                        <a href="#detalle-carta" class="card-link" data-action="ver-detalle" data-id="Y02">Ver detalle</a>
+                    </li>
+                </ul>
             </section>
         </section>
 
