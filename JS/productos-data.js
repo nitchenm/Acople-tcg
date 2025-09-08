@@ -115,7 +115,7 @@ const cartas = [
         rareza: "Mitica",
         precio: 129000,
         descripcion: "Cada vez que un oponente lanza un hehizo , puedes robar una carta a menos que pague 1 mana incoloro"
-    }
+    },
 
 
     // Aca seguire agregando mas cartas , les dejo sus secciones para que las vaya llenando 
@@ -123,6 +123,43 @@ const cartas = [
     /* Fin seccion Data magic singles */
 
     /* Comienzo de seccion data para yugioh */
+    {
+        id: "droll-&-lock-bird",
+        nombre: "Droll & Lock Bird",
+        imagen: "/images/yugiohSingles/Droll-&-Lock-Bird.jpg",
+        edicion: "1a edicion",
+        rareza: "Rara",
+        precio: 2000,
+        descripcion: "Si una o más cartas en el Deck Principal son añadidas a la mano de tu adversario, excepto durante la Draw Phase (Efecto Rápido): puedes mandar al Cementerio esta carta en tu mano; por el resto de este turno, no se pueden añadir a la mano cartas en el Deck Principal de ningún jugador." 
+    },
+    {
+        id: "dark-magician-of-chaos",
+        nombre: "Dark Magician Of Chaos",
+        imagen: "/images/yugiohSingles/Dark-Magician-Of-Chaos.jpg",
+        edicion: "1a edicion",
+        rareza: "Rara",
+        precio: 150000,
+        descripcion: "Durante la End Phase, si esta carta fue Invocada de Modo Normal o Especial en este turno: puedes seleccionar 1 Carta Mágica en tu Cementerio; añádela a tu mano. Sólo puedes usar este efecto de Mago Oscuro del Caos una vez por turno. Si esta carta destruye un monstruo de tu adversario en batalla, después del cálculo de daño: destierra a ese monstruo de tu adversario. Si esta carta boca arriba fuera a dejar el Campo, en su lugar destiérrala."
+    },
+    {
+        id: "dark-magician",
+        nombre: "Dark Magician",
+        imagen: "/images/yugiohSingles/Dark-Magician.webp",
+        edicion: "1a edicion",
+        rareza: "Rara",
+        precio: 150000,
+        descripcion: "El más grande de los magos en cuanto al ataque y la defensa."
+    },
+    {
+        id: "fiendsmith-engraver",
+        nombre: "Fiendsmith Engraver",
+        imagen: "/images/yugiohSingles/Fiendsmith-Engraver.jpg",
+        edicion: "1a edicion",
+        rareza: "Secreta",
+        precio: 75000,
+        descripcion: "Puedes descartar esta carta; añade a tu mano 1 Mágica/Trampa Demoniherrero/a en tu Deck. Puedes seleccionar 1 Carta de Equipo Demoniherrero/a que controles y 1 monstruo en el Campo; mándalos al Cementerio. Si esta carta está en tu Cementerio: puedes barajar al Deck/Deck Extra otro monstruo Demonio de LUZ en tu Cementerio; Invoca esta carta de Modo Especial. Sólo puedes usar cada efecto de Demoniherrero Grabador una vez por turno."
+    }
+
     /* Fin seccion Data yugioh */
 
 
