@@ -8,3 +8,101 @@ sin embargo la estructura ya esta hecha solo falta modificar colores y agregar m
 
 
 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Comunidad - Acople TCG</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/blog.css">
+</head>
+<body>
+
+    <!-- HEADER / NAV -->
+    <header role="banner">
+        <div class="brand">
+            <img src="/images/logo_acople.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/Pages/blog.html">Guías & Comunidad</a></li>
+                <li><a href="#comentarios">Comentarios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="blog-content" tabindex="-1">
+
+        <!-- Guías y Estrategias -->
+        <section id="guias" aria-labelledby="guias-title">
+            <h2 id="guias-title">Guías y Estrategias</h2>
+            <div class="carousel">
+                <div class="carousel-item">
+                    <p>Conoce las cartas más raras de Magic: The Gathering y aprende a combinarlas para combos explosivos. Aumenta tus probabilidades de ganar en torneos locales y online.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>Pokémon GX y EX son muy valiosos. Identifica cuáles se revalorizan con el tiempo y cómo hacer trading de manera segura para maximizar tu colección.</p>
+                </div>
+                <div class="carousel-item">
+                    <p>Yu-Gi-Oh! requiere estrategia en cada duelo. Aprende a equilibrar monstruos, magias y trampas, y domina la ventaja de turno con cartas clave.</p>
+                </div>
+            </div>
+            <button class="carousel-control prev">⟨</button>
+            <button class="carousel-control next">⟩</button>
+        </section>
+
+        <!-- Comunidad / Comentarios -->
+        <section id="comentarios" aria-labelledby="comentarios-title">
+            <h2 id="comentarios-title">Comunidad</h2>
+
+            <!-- Lista de comentarios -->
+            <div id="comentarios-lista">
+                <div class="comentario">
+                    <strong class="usuario">Carlos</strong>
+                    <p>¡La carta Black Lotus es impresionante! Mi combo favorito siempre la incluye.</p>
+                    <div class="acciones">
+                        <button class="like">👍 <span>3</span></button>
+                        <button class="dislike">👎 <span>0</span></button>
+                    </div>
+                </div>
+
+                <div class="comentario">
+                    <strong class="usuario">Lucía</strong>
+                    <p>Recomiendo invertir en Pokémon raros, especialmente Charizard GX y Pikachu Illustrator.</p>
+                    <div class="acciones">
+                        <button class="like">👍 <span>5</span></button>
+                        <button class="dislike">👎 <span>1</span></button>
+                    </div>
+                </div>
+
+                <div class="comentario">
+                    <strong class="usuario">Miguel</strong>
+                    <p>En Yu-Gi-Oh! el dragón azul siempre me salva en partidas difíciles. Muy recomendable practicar combos defensivos.</p>
+                    <div class="acciones">
+                        <button class="like">👍 <span>2</span></button>
+                        <button class="dislike">👎 <span>0</span></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Caja para nuevo comentario -->
+            <div id="nuevo-comentario">
+                <h3>Deja tu comentario</h3>
+                <input type="text" id="nombre-usuario" placeholder="Nombre">
+                <textarea id="texto-comentario" placeholder="Escribe tu comentario aquí..."></textarea>
+                <button id="agregar-comentario">Enviar</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 Acople TCG. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/JS/blog.js"></script>
+</body>
+</html>

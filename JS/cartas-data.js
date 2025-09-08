@@ -34,6 +34,15 @@ const cartas = [
         rareza: "Mitica",
         precio: 6500000,
         descripcion: "Permite generar mana verde por cada criatura que controles"
+    },
+    {
+        id: "mox-saphire",
+        nombre: "Mox saphire",
+        imagen: "/images/magicSingles/mox-saphire.jpg",
+        edicion: "Alpha",
+        rareza: "Mitica",
+        precio: 9000000,
+        descripcion: "Genera mana azul"
     }
 
 

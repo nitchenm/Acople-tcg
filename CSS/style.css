@@ -1,11 +1,19 @@
 /* Paleta de colores del proyecto
-indigo eye : #08415C
-persian red: #CC2936
-tea rose: #EBBAB9
-Blue munsali : #388697
-
+    - Azul oscuro: #08415C
+    - Azul medio: #286D8D
+    - Azul claro: #388697
+    - Gris claro: #F5F5F5
+    - Gris medio: #E6E6E6
+    - Gris oscuro: #292525
+    - Naranja brillante: #D97D54
+    - Naranja suave: #EFA58B
+    - Púrpura vibrante: #9A48C9
+    - Púrpura suave: #C597E4
+    - Rosa brillante: #EBBAB9
+    - Rosa suave: #F2D1D1
+    - Amarillo dorado: #DFAC4D
+    - Amarillo suave: #E9DBDB
 */
-
 
 /* Logo de la tienda*/
 
@@ -38,6 +46,9 @@ Blue munsali : #388697
 }
 
 .card-tcg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final */
     background: linear-gradient(160deg, #f5f5f5, #e6e6e6);
     border-radius: 18px;
     box-shadow: 0 6px 18px rgba(8,65,92,0.25);
@@ -45,8 +56,6 @@ Blue munsali : #388697
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    display: flex;
-    flex-direction: column;
 }
 
 .card-tcg:hover {
@@ -54,51 +63,69 @@ Blue munsali : #388697
     box-shadow: 0 12px 28px rgba(41, 166, 204, 0.4);
 }
 
+/* Imagen arriba */
 .card-tcg .card-img {
     width: 100%;
-    height: auto;
+    height: 180px;
     object-fit: contain;
     border-bottom: 2px solid #ccc;
+    background: #fff; /* para que todas tengan base uniforme */
 }
 
-.card-tcg .card-title {
+/* Contenido flexible */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* para ocupar el alto de la card */
+    padding: 1rem;
+}
+
+/* Bloque de info (título, marca, desc) */
+.card-info {
+    flex-grow: 1; /* ocupa el espacio restante */
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* Estilos de textos */
+.card-title {
     font-size: 1.2rem;
     font-weight: bold;
     color: #286d8d;
-    margin: 1rem 0 0.3rem;
 }
 
-.card-tcg .card-meta {
+.card-meta {
     font-size: 0.9rem;
     color: #388697;
 }
 
-.card-tcg .card-desc {
+
+.card-desc {
     font-size: 0.9rem;
     color: #292525;
-    margin: 0.5rem 1rem 1rem;
+    margin-top: 0.5rem;
 }
 
-.card-tcg .card-link {
-    display: inline-block;
-    margin: 1rem auto 1.5rem;
-    padding: 0.5em 1.5em;
+/* Botón fijo abajo */
+.card-link {
+    margin-top: auto; /* fuerza el botón abajo */
+    display: block;
+    padding: 0.6em 1.5em;
     background: linear-gradient(135deg, #458ae6, #EBBAB9);
     color: #fff;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
-    margin-top: auto;
-    
 }
 
-.card-tcg .card-link:hover {
+.card-link:hover {
     background: linear-gradient(135deg, #4e50b6d3, #b02ace);
     color: #08415C;
     box-shadow: 0 0 12px rgba(57, 4, 117, 0.7);
 }
-
 
 /* tweaks responsivo*/
 @media (max-width: 700px) {
@@ -112,6 +139,7 @@ Blue munsali : #388697
 h1, h2, h3, h4 {
     color: #e9dbdb;
     text-align: center;
+    font-weight: bold;
     text-shadow: 0 0 8px rgb(18, 19, 20);
 }
 
@@ -142,19 +170,40 @@ header[role=banner] {
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    padding: 60px 0 18%;
+    /*padding: 60px 0 18%;*/
     text-align: center;
     box-shadow: inset 0 -50px 100px rgba(0, 0, 0, 0.6);
 }
 
+/* Contenedor del logo + tagline */
+header[role=banner] .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Tagline */
+header[role=banner] .tagline {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    color: #f5f5f5;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
 /* Nav bar horizontal owo*/
 /* Nav bar mágico */
+/* --- NAVBAR sticky --- */
 nav[aria-label="Navegación principal"] {
-    background: rgba(8,65,92,0.85);
-    padding: 1em 0;
+    background: rgba(8,65,92,0.95);
+    padding: 0.8em 0;
     backdrop-filter: blur(6px);
     border-top: 2px solid #EBBAB9;
     border-bottom: 2px solid #EBBAB9;
+    position: sticky;   /* se queda pegada */
+    top: 0;             /* siempre visible arriba */
+    z-index: 1000;
 }
 
 nav[aria-label="Navegación principal"] ul {
@@ -281,4 +330,85 @@ footer {
     font-size: 0.97rem;
     margin-left: 2px;
     display: block;
+}
+
+/* --- Buscador refinado --- */
+form[aria-label="Buscador de cartas"] {
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    max-width: 600px;
+}
+
+form[aria-label="Buscador de cartas"] label {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: #f2d1d1;
+    text-shadow: 0 1px 2px #000;
+}
+
+form[aria-label="Buscador de cartas"] input[type="search"] {
+    flex: 1;
+    padding: 0.7em 1em;
+    border-radius: 8px;
+    border: 2px solid #9A48C9;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form[aria-label="Buscador de cartas"] input[type="search"]:focus {
+    border-color: #D97D54;
+    box-shadow: 0 0 8px rgba(223,172,77,0.8);
+}
+
+form[aria-label="Buscador de cartas"] button {
+    padding: 0.7em 1.4em;
+    background: linear-gradient(135deg, #286D8D, #9A48C9);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form[aria-label="Buscador de cartas"] button:hover {
+    background: linear-gradient(135deg, #D97D54, #EBBAB9);
+    color: #08415C;
+    box-shadow: 0 0 12px rgba(167, 46, 112, 0.8);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    header[role=banner] {
+        background-attachment: scroll; /* mejora rendimiento móvil */
+        padding: 20px 0;
+    }
+
+    .logo {
+        height: 120px;
+    }
+
+    header[role=banner] .tagline {
+        font-size: 0.9rem;
+    }
+
+    nav[aria-label="Navegación principal"] ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    form[aria-label="Buscador de cartas"] {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form[aria-label="Buscador de cartas"] input,
+    form[aria-label="Buscador de cartas"] button {
+        width: 100%;
+    }
 }
