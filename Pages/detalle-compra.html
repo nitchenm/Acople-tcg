@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="/CSS/detalle-compra.css">
+  <link rel="stylesheet" href="/CSS/style.css">
+  
+</head>
+
+ <!-- HEADER / NAV -->
+    <header role="banner">
+        <div class="brand">
+            <img src="/images/logo_acople.png" alt="Logo Acople TCG" class="logo">
+            <p class="tagline">Mercado de cartas MTG y Pokémon</p>
+        </div>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="/index.html" data-nav>Inicio</a></li>
+                <li><a href="/index.html#singles" data-nav>Singles</a></li>
+                <li><a href="/Pages/productos-acople.html" data-nav>Otros Productos</a></li>
+                <li><a href="/Pages/blog.html" data-nav>Guía & Estrategias</a></li>
+                <li><a href="/Pages/login.html" data-nav>Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+  <h1>Detalle de tu compra</h1>
+  <div id="carrito-detalle"></div>
+
+  <div class="acciones">
+    <a href="/index.html" class="btn btn-volver">⬅ Volver</a>
+    <button class="btn btn-pagar" onclick="pagarCarrito()">💳 Pagar</button>
+  </div>
+
+  <script>
+    function mostrarCarrito() {
+      const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+      const contenedor = document.getElementById('carrito-detalle');
+
+      if (carrito.length === 0) {
+        contenedor.innerHTML = "<p>Tu carrito está vacío.</p>";
+        return;
+      }
+
+      let total = 0;
+      let html = `
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Precio Unitario</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      carrito.forEach(item => {
+        const subtotal = item.precio * item.cantidad;
+        total += subtotal;
+        html += `
+          <tr>
+            <td>${item.nombre}</td>
+            <td>$${item.precio.toLocaleString()}</td>
+            <td>${item.cantidad}</td>
+            <td>$${subtotal.toLocaleString()}</td>
+          </tr>
+        `;
+      });
+
+      html += `
+          </tbody>
+        </table>
+        <h2>Total: $${total.toLocaleString()}</h2>
+      `;
+
+      contenedor.innerHTML = html;
+    }
+
+    function pagarCarrito() {
+      alert("Aquí iría la integración con tu sistema de pago (ej: Webpay, MercadoPago, Paypal, etc.)");
+   
+    }
+
+    mostrarCarrito();
+  </script>
+</body>
+</html>

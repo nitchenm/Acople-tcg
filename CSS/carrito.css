@@ -170,3 +170,27 @@
 .mini-carrito-lista button:hover {
     background: #ccc;
 }
+.mini-carrito-ver-carrito {
+    display: block;
+    width: 100%;
+    background: #3ecc45; /* Rojo principal */
+    color: #fff;
+    text-align: center;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 0.8rem;
+}
+
+.mini-carrito-ver-carrito:hover {
+    background: #34b53b; 
+    transform: scale(1.03);
+}
+
+.mini-carrito-ver-carrito:active {
+    background: #2d9c34; 
+    transform: scale(0.97);
+}
