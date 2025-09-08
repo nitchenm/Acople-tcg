@@ -20,7 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
       if (typeof actualizarMiniCarrito === 'function') {
         actualizarMiniCarrito();
       }
-      alert('Producto agregado al carrito');
+
+      // ✅ Reemplazo de alert() por modal SweetAlert2
+      Swal.fire({
+        icon: 'success',
+        title: 'Producto agregado',
+        text: `${nombre} se añadió al carrito correctamente`,
+        confirmButtonColor: '#CC2936'
+      });
     });
   });
 
@@ -50,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (carrito[idx].cantidad > 1) {
       carrito[idx].cantidad -= 1;
     } else {
-      // Si la cantidad es 1 y se resta, eliminar el producto
       carrito.splice(idx, 1);
     }
     localStorage.setItem('carrito', JSON.stringify(carrito));

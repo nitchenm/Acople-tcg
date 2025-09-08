@@ -7,6 +7,7 @@
     <title>Magic Singles - Acople TCG</title>
     <link rel="stylesheet" href="/CSS/style.css">
     <link rel="stylesheet" href="/CSS/page-singles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
  <!-- HEADER / NAV -->
@@ -94,7 +95,11 @@
                     <p>Edición: Urza Saga</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $120.000.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Black Lotus"
+                    data-precio="120000000"
+                    >Agregar al carrito</button>
                 </article>
 
                 <article class="card">
@@ -105,7 +110,11 @@
                     <p>Edición: Alpha</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $17.000.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Time Walk"
+                    data-precio="17000000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <a href="detalle-carta.html?id=gaea-cradle" class="card-link" style="text-decoration:none;color:inherit;">
@@ -115,7 +124,11 @@
                     <p>Edición: Alpha</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $1.349.999</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Gaea Cradle"
+                    data-precio="1349999"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
                     <a href="detalle-carta.html?id=mox-saphire" class="card-link" style="text-decoration:none;color:inherit;">
@@ -125,35 +138,59 @@
                     <p>Edición: Alpha</p>
                     <p>Rareza: Rara</p>
                     <p>Precio: $15.000.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Mox Saphire"
+                    data-precio="15000000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/volcanic-Island.avif" alt="Volcanic Island">
-                    <h3>Volcanic Island</h3>
+                    <a href="detalle-carta.html?id=volcanic-island"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/volcanic-Island.avif" alt="Volcanic Island">
+                        <h3>Volcanic Island</h3>
+                    </a>
                     <p>Edición: 3era Edicion</p>
                     <p>Rareza: Rara</p>
                     <p>Precio: $764.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Volcanic Island"
+                    data-precio="764000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/black-chocobo.avif" alt="Black Chocobo">
-                    <h3>Traveling Chocobo(Borderless Black Ink - Japonés)</h3>
+                    <a href="detalle-carta.html?id=Black-Chocobo"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/black-chocobo.avif" alt="Black Chocobo">
+                        <h3>Chocobo Negro (ink borderless Japones)</h3>
+                    </a>
                     <p>Edición: Final Fantasy</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $6.500.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Black Chocobo(Japan Edition)"
+                    data-precio="6500000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/chains-of-mephistopheles.jpg" alt="Chains of Mephistopheles">
-                    <h3>Chains of Mephistopheles</h3>
+                    <a href="detalle-carta.html?id=chains-of-mephistopheles"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/chains-of-mephistopheles.jpg" alt="chains-of-mephistopheles">
+                        <h3>Chains of Mephistopheles</h3>
+                    </a>
                     <p>Edición: Legends</p>
                     <p>Rareza: Rara</p>
                     <p>Precio: $1.050.000</p>
-                    <button>Agregar al carrito</button>
+                    <button
+                    class="add-to-cart"
+                    data-nombre="Chains of Mephistopheles"
+                    data-precio="1050000"
+                    >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/ugin.avif" alt="Ugin, the Spirit Dragon">
-                    <h3>Ugin, the Spirit Dragon</h3>
+                    <a href="detalle-carta.html?id=ugin"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/ugin.avif" alt="Ugin the Spirit Dragon">
+                        <h3>Ugin, The spirit dragon</h3>
+                    </a>
                     <p>Edición: Secret Lair</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $915.000</p>
@@ -164,9 +201,11 @@
                     >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/the-one-ring-scroll.jpg" alt="The One Ring">
-                    <h3>The One Ring (Scroll Edition)</h3>
-                    <p>Edición: The lord of the Rings: Tales of Middle earth</p>
+                    <a href="detalle-carta.html?id=one-ring"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/the-one-ring-scroll.jpg" alt="The One Ring">
+                        <h3>The One Ring</h3>
+                    </a>
+                    <p>Edición: The lord of the Rings</p>
                     <p>Rareza: Mítica</p>
                     <p>Precio: $415.000</p>
                     <button
@@ -176,8 +215,10 @@
                     >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/counterspell.avif" alt="Counterspell">
-                    <h3>Counterspell (Foil)</h3>
+                    <a href="detalle-carta.html?id=counterspell"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/counterspell.avif" alt="Counterspell">
+                        <h3>Counterspell</h3>
+                    </a>
                     <p>Edición: Secret Lair</p>
                     <p>Rareza: Rara</p>
                     <p>Precio: $55.000</p>
@@ -188,8 +229,10 @@
                     >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/pact of negation.jpg" alt="Pact Of Negation">
-                    <h3>Pact of Negation (AKH)</h3>
+                    <a href="detalle-carta.html?id=pon"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/pact of negation.jpg" alt="pon">
+                        <h3>Pact Of Negation</h3>
+                    </a>
                     <p>Edición: Masterpiece Series: Invocations</p>
                     <p>Rareza: Mitica</p>
                     <p>Precio: $139.000</p>
@@ -200,9 +243,11 @@
                     >Agregar al carrito</button>
                 </article>
                 <article class="card">
-                    <img src="/images/magicSingles/Rhystic Study.avif" alt="Rhystic Study">
-                    <h3>Rhystic Study</h3>
-                    <p>Edición: Wilds of Eldraine Enchanting Tales</p>
+                    <a href="detalle-carta.html?id=rhystic-study"class="card-link" style="text-decoration:none;color:inherit;">
+                        <img src="/images/magicSingles/Rhystic Study.avif" alt="rhystic-study">
+                        <h3>Rhystic Study</h3>
+                    </a>
+                    <p>Edición: Wilds of Eldraine</p>
                     <p>Rareza: Mitica</p>
                     <p>Precio: $129.000</p>
                     <button
